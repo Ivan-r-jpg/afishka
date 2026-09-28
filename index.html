@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Відображення актуальних подій (вистав, концертів, лекцій, тематичних подій, виставок тощо) по всій Україні. Зручний пошук заходів, детальні описи, ціни квитків та дати проведення.">
+    <title>Afishka</title>
+    <link rel="stylesheet" href="style.css"> <!-- Додав для майбутньої стилізації (Поки що не використовується) -->
+    <script src="script.js" defer></script> <!-- Додав для майбутньої функціональності (Поки що не використовується) -->
+</head>
+
+<body>
+    <header>
+        <a href="#main">
+            <img fetchpriority="high" src="images/afishkalogo-L.png" srcset="images/afishkalogo-S.png 400w, 
+             images/afishkalogo-M.png 800w, 
+             images/afishkalogo-L.png 1200w" sizes="(max-width: 600px) 15vw, 
+            (max-width: 900px) 3vw, 
+            8vw" alt="Логотип afishka" title="Afishka">
+            Afishka
+        </a>
+        <nav id="header-nav">
+            <ul>
+                <li class="nav-item"><a href="#main" title="Перейти до подій">Події</a></li>
+                <li class="nav-item"><a href="#about" title="Перейти до інформації про нас">Про нас</a></li>
+                <li class="nav-item"><a href="#contacts" title="Перейти до контактів">Контакти</a></li>
+            </ul>
+        </nav>
+        <search id="header-search">
+            <form id="search-form">
+                <label for="search-input">Пошук подій:</label>
+                <input type="search" placeholder="Пошук подій" id="search-input" name="search">
+                <button type="submit">Пошук</button>
+            </form>
+        </search>
+    </header>
+    <main id="main">
+        <h1>Афіша подій України</h1>
+        <p><strong>Всі події</strong></p>
+        <ul id="category-list">
+            <li><button type="button" class="category-item">Концерти</button></li>
+            <li><button type="button" class="category-item">Вистави</button></li>
+            <li><button type="button" class="category-item">Лекції</button></li>
+            <li><button type="button" class="category-item">Інше</button></li>
+        </ul>
+        <label for="sorting-select">Сортувати за:</label>
+        <select id="sorting-select" name="sorting">
+            <option selected disabled value="">Оберіть параметр</option>
+            <option class="sorting-option" value="name">За назвою</option>
+            <option class="sorting-option" value="price">За ціною</option>
+            <option class="sorting-option" value="date">За датою</option>
+        </select>
+        <section id="events-container">
+            <h2>Популярні події на сьогодні:</h2>
+            <article class="event-card">
+                <img src="images/event1-L.png" srcset="images/event1-S.png 400w, 
+             images/event1-M.png 800w, 
+             images/event1-L.png 1200w" sizes="(max-width: 600px) 85vw, 
+            (max-width: 900px) 50vw, 
+            23vw" alt="Зображення концерту, скупчення людей" title="Благодійний концерт «Жадан і Собаки»"
+                    loading="lazy">
+                <h3>Благoдійний концерт «Жадан і Собаки»</h3>
+                <p><strong>Категорія:</strong> Концерт</p>
+                <p>Презентація нового альбому та виконання головних хітів. Драйвова атмосфера та живий звук. Увесь
+                    прибуток від продажу квитків піде на підтримку ЗСУ.</p>
+                <p>Ціна: <data value="500">500 грн</data></p>
+                <p>Дата: <time datetime="2026-10-15">15.10.2026</time></p>
+                <p>Місце проведення: Київ, Bel etage</p>
+            </article>
+
+            <article class="event-card">
+                <img src="images/event2-L.png" srcset="images/event2-S.png 400w, 
+             images/event2-M.png 800w, 
+             images/event2-L.png 1200w" sizes="(max-width: 600px) 85vw, 
+            (max-width: 900px) 50vw, 
+            23vw" alt="Зображення розмітки html на екрані монітора"
+                    title="Лекція: «Архітектура сучасних вебзастосунків»" loading="lazy">
+                <h3>Лекція: «Архітектура сучасних вебзастосунків»</h3>
+                <p><strong>Категорія:</strong> Лекція</p>
+                <p>Огляд сучасних патернів проєктування, побудова надійного REST API та оптимізація взаємодії з базами
+                    даних. Ідеально підійде для студентів-розробників та джуніорів.</p>
+                <p>Ціна: <data value="150">150 грн</data></p>
+                <p>Дата: <time datetime="2026-10-20">20.10.2026</time></p>
+                <p>Місце проведення: Суми, Конгрес-центр СумДУ</p>
+            </article>
+
+            <article class="event-card">
+                <img src="images/event3-L.png" srcset="images/event3-S.png 400w, 
+             images/event3-M.png 800w, 
+             images/event3-L.png 1200w" sizes="(max-width: 600px) 85vw, 
+            (max-width: 900px) 50vw, 
+            23vw" alt="Зображення картин на стінах виставкової зали" title="Виставка: «Сенси та Форми»" loading="lazy">
+                <h3>Виставка: «Сенси та Форми»</h3>
+                <p><strong>Категорія:</strong> Виставка</p>
+                <p>Масштабна експозиція робіт молодих українських митців. На вас чекають сучасний живопис, незвичні
+                    скульптури та інтерактивні візуальні інсталяції.</p>
+                <p>Ціна: <data value="200">200 грн</data></p>
+                <p>Дата: <time datetime="2026-11-05">05.11.2026</time></p>
+                <p>Місце проведення: Львів, Палац Мистецтв</p>
+            </article>
+            <article class="event-card">
+                <img src="images/event4-L.png" srcset="images/event4-S.png 400w, 
+             images/event4-M.png 800w, 
+             images/event4-L.png 1200w" sizes="(max-width: 600px) 85vw, 
+            (max-width: 900px) 50vw, 
+            23vw" alt="Актори на сцені театру в історичних костюмах" title="Вистава «Конотопська відьма»"
+                    loading="lazy">
+                <h3>Вистава «Конотопська відьма»</h3>
+                <p><strong>Категорія:</strong> Вистави</p>
+                <p>Сучасне прочитання класичного твору. Яскрава сценографія, містика та неперевершена гра акторів, яка
+                    залишить незабутні враження.</p>
+                <p>Ціна: <data value="300">300 грн</data></p>
+                <p>Дата: <time datetime="2026-11-12">12.11.2026</time></p>
+                <p>Місце проведення: Суми, Театр ім. Щепкіна</p>
+            </article>
+
+            <article class="event-card">
+                <img src="images/event5-L.png" srcset="images/event5-S.png 400w, 
+             images/event5-M.png 800w, 
+             images/event5-L.png 1200w" sizes="(max-width: 600px) 85vw, 
+            (max-width: 900px) 50vw, 
+            23vw" alt="Веселе зображення коміків на зеленому тлі" title="Великий Стендап Концерт" loading="lazy">
+                <h3>Великий Стендап Концерт</h3>
+                <p><strong>Категорія:</strong> Інше</p>
+                <p>Найкращі коміки країни збираються на одній сцені, щоб подарувати вечір гострої комедії, життєвих
+                    історій та імпровізації з глядачами.</p>
+                <p>Ціна: <data value="400">400 грн</data></p>
+                <p>Дата: <time datetime="2026-10-25">25.10.2026</time></p>
+                <p>Місце проведення: Київ, Жовтневий палац</p>
+            </article>
+
+            <article class="event-card">
+                <img src="images/event6-L.png" srcset="images/event6-S.png 400w, 
+             images/event6-M.png 800w, 
+             images/event6-L.png 1200w" sizes="(max-width: 600px) 85vw, 
+            (max-width: 900px) 50vw, 
+            23vw" alt="Зображення логотипу GitHub" title="Воркшоп: «Основи Git та GitHub»" loading="lazy">
+                <h3>Воркшоп: «Основи Git та GitHub»</h3>
+                <p><strong>Категорія:</strong> Лекції</p>
+                <p>Практичне заняття для розробників. Навчимося створювати репозиторії, працювати з feature-гілками та
+                    вирішувати конфлікти при злитті коду.</p>
+                <p>Ціна: <data value="0">Безкоштовно</data></p>
+                <p>Дата: <time datetime="2026-10-30">30.10.2026</time></p>
+                <p>Місце проведення: Онлайн (Zoom)</p>
+            </article>
+        </section>
+        <aside id="interesting-facts">
+            <h2>Цікаво знати</h2>
+            <p>
+                На Afishka можна знайти концерти, вистави, лекції
+                та інші цікаві події в Україні.
+            </p>
+        </aside>
+        <section id="edit-form">
+            <form id="event-form">
+                <fieldset>
+                    <legend>
+                        <h2>Додати нову подію</h2>
+                    </legend>
+                    <label for="event-title">Назва події:</label>
+                    <input type="text" id="event-title" name="event-title" required>
+                    <br>
+                    <label for="event-category">Категорія:</label>
+                    <select id="event-category" name="event-category" required>
+                        <option disabled selected value="">Оберіть категорію</option>
+                        <option class="category-option" value="concert">Концерт</option>
+                        <option class="category-option" value="lecture">Лекція</option>
+                        <option class="category-option" value="exhibition">Виставка</option>
+                        <option class="category-option" value="other">Інше</option>
+                    </select>
+                    <br>
+                    <label for="event-description">Опис події:</label>
+                    <textarea rows="4" cols="40" id="event-description" name="event-description" required></textarea>
+                    <br>
+                    <label for="event-price">Ціна (грн):</label>
+                    <input type="number" id="event-price" name="event-price" min="0" required>
+                    <br>
+                    <label for="event-date">Дата проведення:</label>
+                    <input type="date" id="event-date" name="event-date" required>
+                    <br>
+                    <label for="event-location">Місце проведення:</label>
+                    <input type="text" id="event-location" name="event-location" required>
+                    <br>
+                    <button id="save-button" type="submit">Зберегти</button>
+                    <button id="reset-button" disabled type="reset">Очистити</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div id="about">
+            <h2>Про нас</h2>
+            <p>Ми створили Afishka, щоб допомогти людям знаходити цікаві події по всій Україні. Наша мета - зробити
+                культурне життя доступним та зручним для кожного.</p>
+        </div>
+
+        <div id="contacts">
+            <h2>Контакти</h2>
+            <address>
+                <p>Електронна пошта: <a href="mailto:info@afishka.ua" title="Електронна пошта">info@afishka.ua</a></p>
+                <p>Контактний телефон: <a href="tel:+380123456789" title="Контактний телефон">+38 (012) 345-67-89</a>
+                </p>
+                <p>Адреса: <a href="https://maps.google.com/?q=Kyiv" title="Переглянути на карті" target="_blank">м.
+                        Київ, вул. Хрещатик, 1</a></p>
+            </address>
+        </div>
+
+        <small>&copy; 2026 Afishka. Розроблено: студент Орехов Іван.</small>
+    </footer>
+</body>
+
+</html>
