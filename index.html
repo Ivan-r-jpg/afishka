@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Відображення актуальних подій (вистав, концертів, лекцій, тематичних подій, виставок тощо) по всій Україні. Зручний пошук заходів, детальні описи, ціни квитків та дати проведення.">
-    <title>Afishka</title>
+        content="Головна сторінка Afishka. Відображення актуальних подій (вистав, концертів, лекцій, тематичних подій, виставок тощо) по всій Україні. Зручний пошук заходів, детальні описи, ціни квитків та дати проведення.">
+    <link type="image/x-icon" sizes="32x32" rel="icon" href="favicon.ico">
+        <title>Каталог подій – Afishka</title>
     <link rel="stylesheet" href="style.css"> <!-- Додав для майбутньої стилізації (Поки що не використовується) -->
     <script src="script.js" defer></script> <!-- Додав для майбутньої функціональності (Поки що не використовується) -->
 </head>
 
 <body>
     <header>
-        <a href="#main">
+        <a href="index.html">
             <img fetchpriority="high" src="images/afishkalogo-L.png" srcset="images/afishkalogo-S.png 400w, 
              images/afishkalogo-M.png 800w, 
              images/afishkalogo-L.png 1200w" sizes="(max-width: 600px) 15vw, 
@@ -21,23 +22,23 @@
             8vw" alt="Логотип afishka" title="Afishka">
             Afishka
         </a>
-        <nav id="header-nav">
+        <nav id="header-nav" aria-label="Основна навігація">
             <ul>
-                <li class="nav-item"><a href="#main" title="Перейти до подій">Події</a></li>
-                <li class="nav-item"><a href="#about" title="Перейти до інформації про нас">Про нас</a></li>
+                <li class="nav-item"><a href="index.html" aria-current="page" title="Перейти до головної сторінки">Головна</a></li>
+                <li class="nav-item"><a href="about.html" title="Дізнатися більше інформації про нас">Про afishka</a></li>
                 <li class="nav-item"><a href="#contacts" title="Перейти до контактів">Контакти</a></li>
             </ul>
         </nav>
-        <search id="header-search">
+    </header>
+    <main id="main">
+        <h1>Афіша подій України</h1>
+        <search id="header-search" aria-label="Пошук подій">
             <form id="search-form">
                 <label for="search-input">Пошук подій:</label>
                 <input type="search" placeholder="Пошук подій" id="search-input" name="search">
                 <button type="submit">Пошук</button>
             </form>
         </search>
-    </header>
-    <main id="main">
-        <h1>Афіша подій України</h1>
         <p><strong>Всі події</strong></p>
         <ul id="category-list">
             <li><button type="button" class="category-item">Концерти</button></li>
@@ -61,7 +62,7 @@
             (max-width: 900px) 50vw, 
             23vw" alt="Зображення концерту, скупчення людей" title="Благодійний концерт «Жадан і Собаки»"
                     loading="lazy">
-                <h3>Благoдійний концерт «Жадан і Собаки»</h3>
+                <h3><a href="details.html">Благодійний концерт «Жадан і Собаки»</a></h3>
                 <p><strong>Категорія:</strong> Концерт</p>
                 <p>Презентація нового альбому та виконання головних хітів. Драйвова атмосфера та живий звук. Увесь
                     прибуток від продажу квитків піде на підтримку ЗСУ.</p>
@@ -77,7 +78,7 @@
             (max-width: 900px) 50vw, 
             23vw" alt="Зображення розмітки html на екрані монітора"
                     title="Лекція: «Архітектура сучасних вебзастосунків»" loading="lazy">
-                <h3>Лекція: «Архітектура сучасних вебзастосунків»</h3>
+                <h3><a href="details.html">Лекція: «Архітектура сучасних вебзастосунків»</a></h3>
                 <p><strong>Категорія:</strong> Лекція</p>
                 <p>Огляд сучасних патернів проєктування, побудова надійного REST API та оптимізація взаємодії з базами
                     даних. Ідеально підійде для студентів-розробників та джуніорів.</p>
@@ -92,7 +93,7 @@
              images/event3-L.png 1200w" sizes="(max-width: 600px) 85vw, 
             (max-width: 900px) 50vw, 
             23vw" alt="Зображення картин на стінах виставкової зали" title="Виставка: «Сенси та Форми»" loading="lazy">
-                <h3>Виставка: «Сенси та Форми»</h3>
+                <h3><a href="details.html">Виставка: «Сенси та Форми»</a></h3>
                 <p><strong>Категорія:</strong> Виставка</p>
                 <p>Масштабна експозиція робіт молодих українських митців. На вас чекають сучасний живопис, незвичні
                     скульптури та інтерактивні візуальні інсталяції.</p>
@@ -107,7 +108,7 @@
             (max-width: 900px) 50vw, 
             23vw" alt="Актори на сцені театру в історичних костюмах" title="Вистава «Конотопська відьма»"
                     loading="lazy">
-                <h3>Вистава «Конотопська відьма»</h3>
+                <h3><a href="details.html">Вистава «Конотопська відьма»</a></h3>
                 <p><strong>Категорія:</strong> Вистави</p>
                 <p>Сучасне прочитання класичного твору. Яскрава сценографія, містика та неперевершена гра акторів, яка
                     залишить незабутні враження.</p>
@@ -122,7 +123,7 @@
              images/event5-L.png 1200w" sizes="(max-width: 600px) 85vw, 
             (max-width: 900px) 50vw, 
             23vw" alt="Веселе зображення коміків на зеленому тлі" title="Великий Стендап Концерт" loading="lazy">
-                <h3>Великий Стендап Концерт</h3>
+                <h3><a href="details.html">Великий Стендап Концерт</a></h3>
                 <p><strong>Категорія:</strong> Інше</p>
                 <p>Найкращі коміки країни збираються на одній сцені, щоб подарувати вечір гострої комедії, життєвих
                     історій та імпровізації з глядачами.</p>
@@ -137,7 +138,7 @@
              images/event6-L.png 1200w" sizes="(max-width: 600px) 85vw, 
             (max-width: 900px) 50vw, 
             23vw" alt="Зображення логотипу GitHub" title="Воркшоп: «Основи Git та GitHub»" loading="lazy">
-                <h3>Воркшоп: «Основи Git та GitHub»</h3>
+                <h3><a href="details.html">Воркшоп: «Основи Git та GitHub»</a></h3>
                 <p><strong>Категорія:</strong> Лекції</p>
                 <p>Практичне заняття для розробників. Навчимося створювати репозиторії, працювати з feature-гілками та
                     вирішувати конфлікти при злитті коду.</p>
@@ -154,10 +155,11 @@
             </p>
         </aside>
         <section id="edit-form">
+            <h2>Додати нову подію</h2>
             <form id="event-form">
                 <fieldset>
                     <legend>
-                        <h2>Додати нову подію</h2>
+                        Основні параметри події
                     </legend>
                     <label for="event-title">Назва події:</label>
                     <input type="text" id="event-title" name="event-title" required>
@@ -190,13 +192,7 @@
         </section>
     </main>
     <footer>
-        <div id="about">
-            <h2>Про нас</h2>
-            <p>Ми створили Afishka, щоб допомогти людям знаходити цікаві події по всій Україні. Наша мета - зробити
-                культурне життя доступним та зручним для кожного.</p>
-        </div>
-
-        <div id="contacts">
+        <section id="contacts">
             <h2>Контакти</h2>
             <address>
                 <p>Електронна пошта: <a href="mailto:info@afishka.ua" title="Електронна пошта">info@afishka.ua</a></p>
@@ -205,9 +201,9 @@
                 <p>Адреса: <a href="https://maps.google.com/?q=Kyiv" title="Переглянути на карті" target="_blank">м.
                         Київ, вул. Хрещатик, 1</a></p>
             </address>
-        </div>
+        </section>
 
-        <small>&copy; 2026 Afishka. Розроблено: студент Орехов Іван.</small>
+        <small>&copy; 2026 Afishka. Розроблено: студент групи ІН-41/1 - Орехов Іван.</small>
     </footer>
 </body>
 
