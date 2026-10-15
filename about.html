@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Детальна інформація про сервіс Afishka. Для чого створено, які можливості надає користувачам та як ним користуватися.">
+    <link type="image/x-icon" sizes="32x32" rel="icon" href="favicon.ico">
+    <title>Про проєкт – Afishka</title>
+    <link rel="stylesheet" href="style.css"> <!-- Додав для майбутньої стилізації (Поки що не використовується) -->
+    <script src="script.js" defer></script> <!-- Додав для майбутньої функціональності (Поки що не використовується) -->
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img fetchpriority="high" src="images/afishkalogo-L.png" srcset="images/afishkalogo-S.png 400w, 
+             images/afishkalogo-M.png 800w, 
+             images/afishkalogo-L.png 1200w" sizes="(max-width: 600px) 15vw, 
+            (max-width: 900px) 3vw, 
+            8vw" alt="Логотип afishka" title="Afishka">
+            Afishka
+        </a>
+        <nav id="header-nav" aria-label="Основна навігація">
+            <ul>
+                <li class="nav-item"><a href="index.html" title="Перейти до головної сторінки">Головна</a></li>
+                <li class="nav-item"><a href="about.html" aria-current="page"
+                        title="Дізнатися більше інформації про нас">Про afishka</a></li>
+                <li class="nav-item"><a href="#contacts" title="Перейти до контактів">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+        <h1>Про Afishka</h1>
+        <p>Сервіс Afishka створено для того, щоб допомогти людям знаходити актуальні події по всій Україні.<br>Ми
+            прагнемо зробити культурне життя доступним та зручним для кожного користувача.</p>
+        <h2>Як користуватися сервісом</h2>
+        <ol>
+            <li>Перейдіть на головну сторінку</li>
+            <li>Використайте пошук, щоб знайти бажану подію</li>
+            <li>Виберіть тип події</li>
+            <li>Відфільтруйте результати</li>
+            <li>Оберіть потрібну подію, клікнувши на неї</li>
+            <li>Насолоджуйтесь простотою, що надає сервіс:)</li>
+        </ol>
+        <h2>Можливості сервісу, що будуть доступними вже зовсім скоро</h2>
+        <ul>
+            <li>Можливість додавати події до обраного</li>
+            <li>Можливість залишати відгуки та оцінки подій</li>
+            <li>Можливість ділитися подіями з друзями</li>
+            <li>Можливість отримувати персоналізовані рекомендації</li>
+            <li>Можливість насолоджуватися красивим та ненав'язливим інтерфейсом</li>
+        </ul>
+        </section>
+        <section id="about-video">
+            <h2>Відчуйте атмосферу українських подій</h2>
+            <p>Подивіться, як проходять культурні та музичні заходи, які об'єднують тисячі людей:</p>
+
+            <video width="640" height="360" preload="metadata" controls poster="images/event1poster.png" title="Відео з концерту «Жадан і Собаки»">
+                <source src="media/event1.mp4" type="video/mp4">
+                <source src="media/event1.webm" type="video/webm">
+                <track kind="captions" src="media/event1.vtt" srclang="uk" label="Українська" default>
+                <p>Ваш браузер не відтворює відео. <a href="media/event1.mp4" download title="Завантажити відео">Завантажте відеофайл</a></p>
+            </video>
+    
+        </section>
+        <section id="faq">
+            <h2>Часті запитання (FAQ)</h2>
+
+            <details name="faq-group" open>
+                <summary>Чи безкоштовне користування каталогом Afishka?</summary>
+                <p>
+                    Так, перегляд усіх подій, пошук за категоріями та розміщення нових анонсів на нашій платформі є
+                    повністю безкоштовними.
+                </p>
+            </details>
+
+            <details name="faq-group">
+                <summary>Як організатору додати власну подію на сайт?</summary>
+                <p>
+                    На головній сторінці каталогу прогорніть униз до форми «Додати нову подію», заповніть усі
+                    обов'язкові поля та натисніть кнопку «Зберегти».
+                </p>
+            </details>
+
+            <details name="faq-group">
+                <summary>Що робити у разі повітряної тривоги під час заходу?</summary>
+                <p>
+                    Усі офлайн-локації наших партнерів обладнані сертифікованими укриттями або розташовані поруч із
+                    підземними станціями метро. У разі тривоги подія призупиняється, а глядачі проходять у безпечне
+                    місце.
+                </p>
+            </details>
+        </section>
+    </main>
+    <footer>
+        <section id="contacts">
+            <h2>Контакти</h2>
+            <address>
+                <p>Електронна пошта: <a href="mailto:info@afishka.ua" title="Електронна пошта">info@afishka.ua</a></p>
+                <p>Контактний телефон: <a href="tel:+380123456789" title="Контактний телефон">+38 (012) 345-67-89</a>
+                </p>
+                <p>Адреса: <a href="https://maps.google.com/?q=Kyiv" title="Переглянути на карті" target="_blank">м.
+                        Київ, вул. Хрещатик, 1</a></p>
+            </address>
+        </section>
+
+        <small>&copy; 2026 Afishka. Розроблено: студент групи ІН-41/1 - Орехов Іван</small>
+    </footer>
+</body>
+
+</html>
