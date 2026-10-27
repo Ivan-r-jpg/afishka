@@ -56,7 +56,7 @@
     </header>
     <main id="main">
       <h1>Благодійний концерт «Жадан і Собаки»</h1>
-      <section id="detail-navigation">
+      <div id="detail-navigation">
         <nav id="breadcrumbs" aria-label="Хлібні крихти">
           <ol>
             <li>
@@ -71,11 +71,11 @@
             </li>
           </ol>
         </nav>
-      </section>
+      </div>
       <section aria-labelledby="edit-event">
         <h2 id="edit-event">Редагування події</h2>
 
-        <form id="event-edit-form" method="get" action="">
+        <form id="event-edit-form" method="get">
           <input type="hidden" name="eventId" value="1" />
 
           <fieldset>
@@ -89,7 +89,7 @@
               required
               pattern="^AF-\d{4}$"
               aria-describedby="code-hint"
-              value="AF-1001" aria-describedby="code-hint"
+              value="AF-1001"
             />
             <p id="code-hint">Формат: AF- та 4 цифри (наприклад, AF-1024)</p>
             <br />
@@ -129,7 +129,7 @@
               id="event-poster"
               name="poster"
               accept="image/png, image/jpeg, image/webp"
-              aria-describedby="poster-hint" aria-describedby="poster-hint"
+              aria-describedby="poster-hint"
             />
             <p id="poster-hint">
               Необов'язково. Підтримувані формати: PNG, JPEG, WEBP.
@@ -195,7 +195,7 @@
               minlength="5"
               maxlength="120"
               aria-describedby="location-hint"
-              value="м. Київ, клуб Bel etage" aria-describedby="location-hint"
+              value="м. Київ, клуб Bel etage" 
             />
             <p id="location-hint">
               Введіть місце проведення події (мінімум 5 символів, максимум 120
