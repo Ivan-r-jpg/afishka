@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Сторінка редагування події: Благoдійний концерт «Жадан і Собаки». Можливість змінювати дату проведення, місце проведення, ціни квитків та інші деталі."
+    />
+    <link type="image/x-icon" sizes="32x32" rel="icon" href="favicon.ico" />
+    <title>
+      Редагування події "Благoдійний концерт «Жадан і Собаки»" – Afishka
+    </title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Додав для майбутньої стилізації (Поки що не використовується) -->
+    <script src="script.js" defer></script>
+    <!-- Додав для майбутньої функціональності (Поки що не використовується) -->
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html">
+        <img
+          fetchpriority="high"
+          src="images/afishkalogo-L.png"
+          srcset="
+            images/afishkalogo-S.png  400w,
+            images/afishkalogo-M.png  800w,
+            images/afishkalogo-L.png 1200w
+          "
+          sizes="(max-width: 600px) 15vw, 
+            (max-width: 900px) 3vw, 
+            8vw"
+          alt="Логотип afishka"
+          title="Afishka"
+        />
+        Afishka
+      </a>
+      <nav id="header-nav" aria-label="Основна навігація">
+        <ul>
+          <li class="nav-item">
+            <a href="index.html" title="Перейти до головної сторінки"
+              >Головна</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="about.html" title="Дізнатися більше інформації про нас"
+              >Про afishka</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#contacts" title="Перейти до контактів">Контакти</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main">
+      <h1>Благодійний концерт «Жадан і Собаки»</h1>
+      <section id="detail-navigation">
+        <nav id="breadcrumbs" aria-label="Хлібні крихти">
+          <ol>
+            <li>
+              <a href="admin.html" title="Перейти до сторінки адміністрування"
+                >Адміністрування</a
+              >
+            </li>
+            <li>
+              <a aria-current="page"
+                >Редагування події - Благодійний концерт «Жадан і Собаки»</a
+              >
+            </li>
+          </ol>
+        </nav>
+      </section>
+      <section aria-labelledby="edit-event">
+        <h2 id="edit-event">Редагування події</h2>
+
+        <form id="event-edit-form" method="get" action="">
+          <input type="hidden" name="eventId" value="1" />
+
+          <fieldset>
+            <legend>Основні дані події</legend>
+
+            <label for="event-code">Артикул події:</label>
+            <input
+              type="text"
+              id="event-code"
+              name="eventCode"
+              required
+              pattern="^AF-\d{4}$"
+              aria-describedby="code-hint"
+              value="AF-1001" aria-describedby="code-hint"
+            />
+            <p id="code-hint">Формат: AF- та 4 цифри (наприклад, AF-1024)</p>
+            <br />
+
+            <label for="event-title">Назва події:</label>
+            <input
+              type="text"
+              id="event-title"
+              name="title"
+              required
+              minlength="5"
+              maxlength="100"
+              value="Благодійний концерт «Жадан і Собаки»" aria-describedby="title-hint"
+            />
+            <br />
+
+            <label for="event-category">Категорія:</label>
+            <select id="event-category" name="category" required aria-describedby="category-hint">
+              <option disabled value="">Оберіть категорію</option>
+              <option class="category-option" value="concert" selected>
+                Концерт
+              </option>
+              <option class="category-option" value="lecture">Лекція</option>
+              <option class="category-option" value="performance">
+                Вистава
+              </option>
+              <option class="category-option" value="exhibition">
+                Виставка
+              </option>
+              <option class="category-option" value="other">Інше</option>
+            </select>
+            <br />
+
+            <label for="event-poster">Постер (зображення):</label>
+            <input
+              type="file"
+              id="event-poster"
+              name="poster"
+              accept="image/png, image/jpeg, image/webp"
+              aria-describedby="poster-hint" aria-describedby="poster-hint"
+            />
+            <p id="poster-hint">
+              Необов'язково. Підтримувані формати: PNG, JPEG, WEBP.
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Опис і наявність</legend>
+
+            <label for="event-description">Опис події:</label>
+            <textarea
+              rows="4"
+              cols="40"
+              id="event-description"
+              name="description"
+              minlength="20"
+              maxlength="1000"
+              aria-describedby="description-hint"
+            >
+Презентація нового альбому та виконання головних хітів. Драйвова атмосфера та живий звук. Увесь прибуток від продажу квитків піде на підтримку ЗСУ.</textarea
+            >
+            <p id="description-hint">
+              Необов'язково. Введіть детальний опис події (мінімум 20 символів,
+              максимум 1000 символів).
+            </p>
+            <br />
+
+            <label for="event-price">Ціна (грн):</label>
+            <input
+              type="number"
+              id="event-price"
+              name="ticketPrice"
+              required
+              min="0"
+              max="10000"
+              step="0.01"
+              value="500"
+              aria-describedby="price-hint"
+            />
+            <p id="price-hint">
+              Введіть ціну квитка (від 0 до 10000 грн, з кроком 0.01).
+            </p>
+            <br />
+
+            <label for="event-date">Дата проведення:</label>
+            <input
+              type="datetime-local"
+              id="event-date"
+              name="eventDate"
+              required
+              min="2026-01-01T00:00"
+              max="2027-12-31T23:59"
+              value="2026-10-15T19:00" aria-describedby="date-hint"
+            />
+            <br />
+
+            <label for="event-location">Місце проведення:</label>
+            <input
+              type="text"
+              id="event-location"
+              name="location"
+              required
+              minlength="5"
+              maxlength="120"
+              aria-describedby="location-hint"
+              value="м. Київ, клуб Bel etage" aria-describedby="location-hint"
+            />
+            <p id="location-hint">
+              Введіть місце проведення події (мінімум 5 символів, максимум 120
+              символів).
+            </p>
+            <br />
+
+            <label>
+              <input type="checkbox" name="inStock" value="yes" checked />
+              Квитки у продажу
+            </label>
+            <br />
+
+            <label>
+              <input
+                type="checkbox"
+                name="agreement"
+                value="yes"
+                required
+                checked aria-describedby="agreement-hint"
+              />
+              Погоджуюсь з умовами публікації події та підтверджую, що надана
+              інформація є достовірною
+            </label>
+          </fieldset>
+
+          <button id="save-button" type="submit">Зберегти зміни</button>
+          <button id="reset-button" type="reset">Скасувати зміни</button>
+          <br /><br />
+          <a href="admin.html" class="back-link"
+            >Повернутися до адміністрування</a
+          >
+        </form>
+      </section>
+    </main>
+    <footer>
+      <section id="contacts">
+        <h2>Контакти</h2>
+        <address>
+          <ul>
+            <li>
+              Електронна пошта:
+              <a href="mailto:info@afishka.ua" title="Електронна пошта"
+                >info@afishka.ua</a
+              >
+            </li>
+
+            <li>
+              Контактний телефон:
+              <a href="tel:+380123456789" title="Контактний телефон"
+                >+38 (012) 345-67-89</a
+              >
+            </li>
+
+            <li>
+              Адреса:
+              <a
+                href="https://maps.google.com/?q=Kyiv"
+                title="Переглянути на карті"
+                target="_blank"
+                >м. Київ, вул. Хрещатик, 1</a
+              >
+            </li>
+          </ul>
+        </address>
+      </section>
+      <section id="admin-section">
+        <h2>Адміністрування</h2>
+        <p>
+          <a href="admin.html" title="Перейти до адміністративної панелі"
+            >Редагування або додавання подій</a
+          >
+        </p>
+      </section>
+      <small
+        >&copy; 2026 Afishka. Розроблено: студент групи ІН-41/1 - Орехов
+        Іван.</small
+      >
+    </footer>
+  </body>
+</html>
