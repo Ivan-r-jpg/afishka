@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Навчальна сторінка адміністративної панелі для керування подіями на сайті Afishka."
+    />
+    <link type="image/x-icon" sizes="32x32" rel="icon" href="favicon.ico" />
+    <title>Адміністративна панель – Afishka</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Додав для майбутньої стилізації (Поки що не використовується) -->
+    <script src="script.js" defer></script>
+    <!-- Додав для майбутньої функціональності (Поки що не використовується) -->
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html">
+        <img
+          fetchpriority="high"
+          src="images/afishkalogo-L.png"
+          srcset="
+            images/afishkalogo-S.png  400w,
+            images/afishkalogo-M.png  800w,
+            images/afishkalogo-L.png 1200w
+          "
+          sizes="(max-width: 600px) 15vw, 
+            (max-width: 900px) 3vw, 
+            8vw"
+          alt="Логотип afishka"
+          title="Afishka"
+        />
+        Afishka
+      </a>
+      <nav id="header-nav" aria-label="Основна навігація">
+        <ul>
+          <li class="nav-item">
+            <a href="index.html" title="Перейти до головної сторінки"
+              >Головна</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="about.html" title="Дізнатися більше інформації про нас"
+              >Про afishka</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#contacts" title="Перейти до контактів">Контакти</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main">
+      <h1>Адміністративна панель</h1>
+      <p>
+        Дана сторінка є навчальною версією адміністративної панелі. Посилання в
+        в підвалі та перевірка полів у браузері не захищають дані. Остаточний
+        контроль виконується виключно на боці сервера.
+      </p>
+      <section aria-labelledby="event-management">
+        <h2 id="event-management">Керування подіями</h2>
+        <p>
+          На цьому етапі кожне посилання «Редагувати» відкриває одну навчальну
+          сторінку для редагування події.
+        </p>
+        <table>
+          <caption>
+            Список подій
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Назва події</th>
+              <th scope="col">Дата</th>
+              <th scope="col">Місце проведення</th>
+              <th scope="col">Ціна квитка</th>
+              <th scope="col">Дія</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Благодійний концерт «Жадан і Собаки»</th>
+              <td>2026-10-15</td>
+              <td>Київ, Bel etage</td>
+              <td>500 грн</td>
+              <td>
+                <a href="admin-edit.html" title="Редагувати подію"
+                  >Редагувати «Жадан і Собаки»</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Лекція: «Архітектура сучасних вебзастосунків»</th>
+              <td>2026-10-20</td>
+              <td>Суми, Конгрес-центр СумДУ</td>
+              <td>150 грн</td>
+              <td>
+                <a href="admin-edit.html" title="Редагувати подію"
+                  >Редагувати «Архітектура сучасних вебзастосунків»</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Виставка: «Сенси та Форми»</th>
+              <td>2026-11-05</td>
+              <td>Львів, Палац Мистецтв</td>
+              <td>200 грн</td>
+              <td>
+                <a href="admin-edit.html" title="Редагувати подію"
+                  >Редагувати «Сенси та Форми»</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Вистава «Конотопська відьма»</th>
+              <td>2026-11-12</td>
+              <td>Суми, Театр ім. Щепкіна</td>
+              <td>300 грн</td>
+              <td>
+                <a href="admin-edit.html" title="Редагувати подію"
+                  >Редагувати «Конотопська відьма»</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Великий Стендап Концерт</th>
+              <td>2026-10-25</td>
+              <td>Київ, Жовтневий палац</td>
+              <td>400 грн</td>
+              <td>
+                <a href="admin-edit.html" title="Редагувати подію"
+                  >Редагувати Великий Стендап Концерт</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Воркшоп: «Основи Git та GitHub»</th>
+              <td>2026-10-30</td>
+              <td>Онлайн (Zoom)</td>
+              <td>Безкоштовно</td>
+              <td>
+                <a href="admin-edit.html" title="Редагувати подію"
+                  >Редагувати «Основи Git та GitHub»</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section aria-labelledby="add-event">
+        <h2 id="add-event">Додати нову подію</h2>
+        <form id="event-form" method="get" action="">
+          <fieldset>
+            <legend>Основні дані події</legend>
+
+            <label for="event-code">Артикул події:</label>
+            <input
+              type="text"
+              id="event-code"
+              name="eventCode"
+              required
+              pattern="^AF-\d{4}$"
+              aria-describedby="code-hint"
+            />
+            <p id="code-hint">Формат: AF- та 4 цифри (наприклад, AF-1024)</p>
+            <br />
+
+            <label for="event-title">Назва події:</label>
+            <input
+              type="text"
+              id="event-title"
+              name="title"
+              required
+              minlength="5"
+              maxlength="100"
+              aria-describedby="title-hint"
+            />
+            <p id="title-hint">Введіть назву події (від 5 до 100 символів).</p>
+            <br />
+
+            <label for="event-category">Категорія:</label>
+            <select id="event-category" name="category" required aria-describedby="category-hint">
+              <option disabled selected value="">Оберіть категорію</option>
+              <option class="category-option" value="concert">Концерт</option>
+              <option class="category-option" value="lecture">Лекція</option>
+              <option class="category-option" value="performance">
+                Вистава
+              </option>
+              <option class="category-option" value="exhibition">
+                Виставка
+              </option>
+              <option class="category-option" value="other">Інше</option>
+            </select>
+            <br />
+
+            <label for="event-poster">Постер (зображення):</label>
+            <input
+              type="file"
+              id="event-poster"
+              name="poster"
+              accept="image/png, image/jpeg, image/webp" aria-describedby="poster-hint"
+            />
+            <p id="poster-hint">
+              Необов'язково. Підтримувані формати: PNG, JPEG, WEBP.
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Опис і наявність</legend>
+
+            <label for="event-description">Опис події:</label>
+            <textarea
+              rows="4"
+              cols="40"
+              id="event-description"
+              name="description"
+              minlength="20"
+              maxlength="1000" airia-describedby="description-hint"
+            ></textarea>
+            <p id="description-hint">
+              Необов'язково. Введіть детальний опис події (мінімум 20 символів,
+              максимум 1000 символів).
+            </p>
+            <br />
+
+            <label for="event-price">Ціна (грн):</label>
+            <input
+              type="number"
+              id="event-price"
+              name="ticketPrice"
+              required
+              min="0"
+              max="10000"
+              step="0.01" aria-describedby="price-hint"
+            />
+            <p id="price-hint">
+              Введіть ціну квитка (від 0 до 10000 грн, з кроком 0.01).
+            </p>
+            <br />
+
+            <label for="event-date">Дата проведення:</label>
+            <input
+              type="datetime-local"
+              id="event-date"
+              name="eventDate"
+              required
+              min="2026-01-01T00:00"
+              max="2027-12-31T23:59" aria-describedby="date-hint"
+            />
+            <br />
+
+            <label for="event-location">Місце проведення:</label>
+            <input
+              type="text"
+              id="event-location"
+              name="location"
+              required
+              minlength="5"
+              maxlength="120" aria-describedby="location-hint"
+            />
+            <p id="location-hint">
+              Введіть місце проведення події (мінімум 5 символів, максимум 120
+              символів).
+            </p>
+            <br />
+
+            <label>
+              <input type="checkbox" name="inStock" value="yes" checked />
+              Квитки у продажу </label
+            ><br />
+            <label>
+              <input type="checkbox" name="agreement" value="yes" required aria-describedby="agreement-hint" />
+              Погоджуюсь з умовами публікації події та підтверджую, що надана
+              інформація є достовірною
+            </label>
+          </fieldset>
+
+          <button id="save-button" type="submit">Додати</button>
+          <button id="reset-button" type="reset">Очистити</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <section id="contacts">
+        <h2>Контакти</h2>
+        <address>
+          <ul>
+            <li>
+              Електронна пошта:
+              <a href="mailto:info@afishka.ua" title="Електронна пошта"
+                >info@afishka.ua</a
+              >
+            </li>
+
+            <li>
+              Контактний телефон:
+              <a href="tel:+380123456789" title="Контактний телефон"
+                >+38 (012) 345-67-89</a
+              >
+            </li>
+
+            <li>
+              Адреса:
+              <a
+                href="https://maps.google.com/?q=Kyiv"
+                title="Переглянути на карті"
+                target="_blank"
+                >м. Київ, вул. Хрещатик, 1</a
+              >
+            </li>
+          </ul>
+        </address>
+      </section>
+      <section id="admin-section">
+        <h2>Адміністрування</h2>
+        <p>
+          <a
+            href="admin.html"
+            aria-current="page"
+            title="Перейти до адміністративної панелі"
+            >Редагування або додавання подій</a
+          >
+        </p>
+      </section>
+      <small
+        >&copy; 2026 Afishka. Розроблено: студент групи ІН-41/1 - Орехов
+        Іван.</small
+      >
+    </footer>
+  </body>
+</html>
