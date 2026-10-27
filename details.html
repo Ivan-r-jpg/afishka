@@ -1,170 +1,394 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Детальна інформація про подію: Благoдійний концерт «Жадан і Собаки». Дата проведення, місце проведення, ціни квитків та інші деталі.">
-    <link type="image/x-icon" sizes="32x32" rel="icon" href="favicon.ico">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Детальна інформація про подію: Благoдійний концерт «Жадан і Собаки». Дата проведення, місце проведення, ціни квитків та інші деталі."
+    />
+    <link type="image/x-icon" sizes="32x32" rel="icon" href="favicon.ico" />
     <title>Благодійний концерт «Жадан і Собаки» – Afishka</title>
-    <link rel="stylesheet" href="style.css"> <!-- Додав для майбутньої стилізації (Поки що не використовується) -->
-    <script src="script.js" defer></script> <!-- Додав для майбутньої функціональності (Поки що не використовується) -->
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Додав для майбутньої стилізації (Поки що не використовується) -->
+    <script src="script.js" defer></script>
+    <!-- Додав для майбутньої функціональності (Поки що не використовується) -->
+  </head>
 
-<body>
+  <body>
     <header>
-        <a href="index.html">
-            <img fetchpriority="high" src="images/afishkalogo-L.png" srcset="images/afishkalogo-S.png 400w, 
-             images/afishkalogo-M.png 800w, 
-             images/afishkalogo-L.png 1200w" sizes="(max-width: 600px) 15vw, 
+      <a href="index.html">
+        <img
+          fetchpriority="high"
+          src="images/afishkalogo-L.png"
+          srcset="
+            images/afishkalogo-S.png  400w,
+            images/afishkalogo-M.png  800w,
+            images/afishkalogo-L.png 1200w
+          "
+          sizes="(max-width: 600px) 15vw, 
             (max-width: 900px) 3vw, 
-            8vw" alt="Логотип afishka" title="Afishka">
-            Afishka
-        </a>
-        <nav id="header-nav" aria-label="Основна навігація">
-            <ul>
-                <li class="nav-item"><a href="index.html"
-                        title="Перейти до головної сторінки">Головна</a></li>
-                <li class="nav-item"><a href="about.html" title="Дізнатися більше інформації про нас">Про afishka</a>
-                </li>
-                <li class="nav-item"><a href="#contacts" title="Перейти до контактів">Контакти</a></li>
-            </ul>
-        </nav>
+            8vw"
+          alt="Логотип afishka"
+          title="Afishka"
+        />
+        Afishka
+      </a>
+      <nav id="header-nav" aria-label="Основна навігація">
+        <ul>
+          <li class="nav-item">
+            <a href="index.html" title="Перейти до головної сторінки"
+              >Головна</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="about.html" title="Дізнатися більше інформації про нас"
+              >Про afishka</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#contacts" title="Перейти до контактів">Контакти</a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <h1>Благодійний концерт «Жадан і Собаки»</h1>
-        <section id="detail-navigation">
-            <nav id="breadcrumbs" aria-label="Хлібні крихти">
-            <ol>
-                <li><a href="index.html" title="Перейти до головної сторінки">Головна</a></li>
-                <li><a href="index.html#main" title="Перейти до афіші подій">Афіша подій</a></li>
-                <li aria-current="page">Благoдійний концерт «Жадан і Собаки»</li>
-            </ol>
-            </nav>
-            <h2>Навігація по деталях події:</h2>
-            <nav id="event-navigator" aria-label="Навігація по деталях події">
-                <ul>
-                    <li><a href="#event-description" title="Перейти до афіші подій">Опис події</a></li>
-                    <li><a href="#event-details" title="Перейти до детальної інформації про подію">Деталі події</a></li>
-                    <li><a href="#event-table" title="Перейти до розкладу події">Розклад події</a></li>
-                </ul>
-            </nav>
-        </section>
-        <section id="event-description">
-            
-            <figure>
-                <picture>
-                    <source media="(max-width: 600px)" srcset="images/event1-S.webp" type="image/webp">
-                    <source media="(max-width: 900px)" srcset="images/event1-M.webp" type="image/webp">
-                    <source srcset="images/event1-L.webp" type="image/webp">
+      <h1>Благодійний концерт «Жадан і Собаки»</h1>
+      <section id="detail-navigation">
+        <nav id="breadcrumbs" aria-label="Хлібні крихти">
+          <ol>
+            <li>
+              <a href="index.html" title="Перейти до головної сторінки"
+                >Головна</a
+              >
+            </li>
+            <li>
+              <a href="index.html#main" title="Перейти до афіші подій"
+                >Афіша подій</a
+              >
+            </li>
+            <li aria-current="page">Благoдійний концерт «Жадан і Собаки»</li>
+          </ol>
+        </nav>
+        <h2>Навігація по деталях події:</h2>
+        <nav id="event-navigator" aria-label="Навігація по деталях події">
+          <ul>
+            <li>
+              <a href="#event-description" title="Перейти до афіші подій"
+                >Опис події</a
+              >
+            </li>
+            <li>
+              <a
+                href="#event-details"
+                title="Перейти до детальної інформації про подію"
+                >Деталі події</a
+              >
+            </li>
+            <li>
+              <a href="#event-table" title="Перейти до розкладу події"
+                >Розклад події</a
+              >
+            </li>
+            <li>
+              <a
+                href="#review-heading"
+                title="Перейти до реєстрації та відгуків про подію"
+                >Реєстрація та відгуки</a
+              >
+          </ul>
+        </nav>
+      </section>
+      <section id="event-description">
+        <figure>
+          <picture>
+            <source
+              media="(max-width: 600px)"
+              srcset="images/event1-S.webp"
+              type="image/webp"
+            />
+            <source
+              media="(max-width: 900px)"
+              srcset="images/event1-M.webp"
+              type="image/webp"
+            />
+            <source srcset="images/event1-L.webp" type="image/webp" />
 
-                    <source media="(max-width: 600px)" srcset="images/event1-S.png" type="image/png">
-                    <source media="(max-width: 900px)" srcset="images/event1-M.png" type="image/png">
-                    <img fetchpriority="high" src="images/event1-L.png" alt="Юрба людей на концерті"
-                        title="Демонстраційне фото з концерту" width="1200" height="800">
-                </picture>
-                <figcaption>Фото з концерту «Жадан і Собаки»</figcaption>
-            </figure>
-            <h2>Опис події</h2>
-            <p>Запрошуємо на великий благодійний концерт гурту <strong>«Жадан і Собаки»</strong> у київському клубі <em>Bel etage</em>! Це буде
-                незабутній вечір вибухового українського ска-панку, гострої соціальної лірики та неймовірної енергетики,
-                яка об’єднує сотні сердець в унісон.
-                Під час виступу музиканти презентують композиції з нового альбому, над яким працювали останні місяці, а
-                також виконають давно улюблені хіти — <cite>«Мальви»</cite>, <cite>«Натаха»</cite>, <cite>«Автозак»</cite>, <cite>«Мадонна»</cite> та <cite>«Ріка»</cite>. На глядачів
-                чекає двогодинна програма <em>наживо</em>, потужне духове звучання, щире спілкування із залом та фірмовий
-                харківський драйв, який, як зазначають організатори, <q>не залишить байдужим жодного слухача</q>.
-            </p>
-            <p>Головна мета заходу — <strong>благодійна</strong>. <mark>Сто відсотків прибутку з продажу квитків</mark>, а також кошти, зібрані під
-                час традиційного благодійного аукціону в перерві між блоками програми, будуть передані на закупівлю
-                <abbr title="Безпілотні літальні апарати">БПЛА</abbr> (дронів), засобів зв’язку та автомобілів для підрозділів <abbr title="Збройні сили України">ЗСУ</abbr>. На аукціоні будуть представлені унікальні лоти: книги Сергія Жадана з автографами, вінілові платівки
-                гурту та пам’ятні сувеніри від українських військових.
-            </p>
-            <p>Відкриття дверей клубу о <time datetime="18:00">18:00</time>, початок концертної програми о <time datetime="19:00">19:00</time>. На локації працює гардероб, барна
-                зона та <mark>облаштоване укриття на випадок повітряної тривоги</mark>. Приходьте, щоб відчути силу живої української
-                музики, зарядитися оптимізмом і зробити свій внесок у спільну справу!
-            </p>
-        </section>
-        <section id="event-details">
-            <h2>Детальна інформація про подію</h2>
+            <source
+              media="(max-width: 600px)"
+              srcset="images/event1-S.png"
+              type="image/png"
+            />
+            <source
+              media="(max-width: 900px)"
+              srcset="images/event1-M.png"
+              type="image/png"
+            />
+            <img
+              fetchpriority="high"
+              src="images/event1-L.png"
+              alt="Юрба людей на концерті"
+              title="Демонстраційне фото з концерту"
+              width="1200"
+              height="800"
+            />
+          </picture>
+          <figcaption>Фото з концерту «Жадан і Собаки»</figcaption>
+        </figure>
+        <h2>Опис події</h2>
+        <p>
+          Запрошуємо на великий благодійний концерт гурту
+          <strong>«Жадан і Собаки»</strong> у київському клубі
+          <em>Bel etage</em>! Це буде незабутній вечір вибухового українського
+          ска-панку, гострої соціальної лірики та неймовірної енергетики, яка
+          об’єднує сотні сердець в унісон. Під час виступу музиканти презентують
+          композиції з нового альбому, над яким працювали останні місяці, а
+          також виконають давно улюблені хіти — <cite>«Мальви»</cite>,
+          <cite>«Натаха»</cite>, <cite>«Автозак»</cite>,
+          <cite>«Мадонна»</cite> та <cite>«Ріка»</cite>. На глядачів чекає
+          двогодинна програма <em>наживо</em>, потужне духове звучання, щире
+          спілкування із залом та фірмовий харківський драйв, який, як
+          зазначають організатори, <q>не залишить байдужим жодного слухача</q>.
+        </p>
+        <p>
+          Головна мета заходу — <strong>благодійна</strong>.
+          <mark>Сто відсотків прибутку з продажу квитків</mark>, а також кошти,
+          зібрані під час традиційного благодійного аукціону в перерві між
+          блоками програми, будуть передані на закупівлю
+          <abbr title="Безпілотні літальні апарати">БПЛА</abbr> (дронів),
+          засобів зв’язку та автомобілів для підрозділів
+          <abbr title="Збройні сили України">ЗСУ</abbr>. На аукціоні будуть
+          представлені унікальні лоти: книги Сергія Жадана з автографами,
+          вінілові платівки гурту та пам’ятні сувеніри від українських
+          військових.
+        </p>
+        <p>
+          Відкриття дверей клубу о <time datetime="18:00">18:00</time>, початок
+          концертної програми о <time datetime="19:00">19:00</time>. На локації
+          працює гардероб, барна зона та
+          <mark>облаштоване укриття на випадок повітряної тривоги</mark>.
+          Приходьте, щоб відчути силу живої української музики, зарядитися
+          оптимізмом і зробити свій внесок у спільну справу!
+        </p>
+      </section>
+      <section id="event-details">
+        <h2>Детальна інформація про подію</h2>
 
-            <dl class="event-specs">
-                <div>
-                    <dt>Категорія:</dt>
-                    <dd>Концерт</dd>
-                </div>
+        <dl class="event-specs">
+          <div>
+            <dt>Категорія:</dt>
+            <dd>Концерт</dd>
+          </div>
 
-                <div>
-                    <dt>Ціна квитка:</dt>
-                    <dd><data value="500">500 грн</data></dd>
-                </div>
+          <div>
+            <dt>Ціна квитка:</dt>
+            <dd><data value="500">500 грн</data></dd>
+          </div>
 
-                <div>
-                    <dt>Дата проведення:</dt>
-                    <dd><time datetime="2026-10-15">15 жовтня 2026 року</time></dd>
-                </div>
+          <div>
+            <dt>Дата проведення:</dt>
+            <dd><time datetime="2026-10-15">15 жовтня 2026 року</time></dd>
+          </div>
 
-                <div>
-                    <dt>Місце проведення:</dt>
-                    <dd>м. Київ, клуб Bel etage</dd>
-                </div>
+          <div>
+            <dt>Місце проведення:</dt>
+            <dd>м. Київ, клуб Bel etage</dd>
+          </div>
 
-                <div>
-                    <dt>Статус події:</dt>
-                    <dd><data value="active">Активна (квитки у продажу)</data></dd>
-                </div>
-            </dl>
-        </section>
-        <section id="event-table">
-            <h2>Програма вечора</h2>
-            <table>
-                <caption>Розклад події</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">Час</th>
-                        <th scope="col">Частина програми</th>
-                        <th scope="col">Місце</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row"><time datetime="18:00">18:00</time></th>
-                        <td >Відкриття дверей клубу, реєстрація та розміщення гостей</td>
-                        <td>Клуб Bel etage, фойє</td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><time datetime="19:00">19:00</time></th>
-                        <td>Початок концертної програми, виступ гурту «Жадан і Собаки»</td>
-                        <td>Клуб Bel etage, головна сцена</td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><time datetime="20:30">20:30</time></th>
-                        <td>Благодійний аукціон у перерві між блоками програми</td>
-                        <td>Клуб Bel etage, головна сцена</td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><time datetime="21:00">21:00</time></th>
-                        <td>Продовження концертної програми та завершення заходу</td>
-                        <td>Клуб Bel etage, головна сцена</td>
-                    </tr>
-                </tbody>
-            </table>    
-        </section>
-       <p><a href="index.html#events-container" title="Повернутися до подій">Назад до подій</a></p>
+          <div>
+            <dt>Статус події:</dt>
+            <dd><data value="active">Активна (квитки у продажу)</data></dd>
+          </div>
+        </dl>
+      </section>
+      <section id="event-table">
+        <h2>Програма вечора</h2>
+        <table>
+          <caption>
+            Розклад події
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Час</th>
+              <th scope="col">Частина програми</th>
+              <th scope="col">Місце</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><time datetime="18:00">18:00</time></th>
+              <td>Відкриття дверей клубу, реєстрація та розміщення гостей</td>
+              <td>Клуб Bel etage, фойє</td>
+            </tr>
+            <tr>
+              <th scope="row"><time datetime="19:00">19:00</time></th>
+              <td>
+                Початок концертної програми, виступ гурту «Жадан і Собаки»
+              </td>
+              <td>Клуб Bel etage, головна сцена</td>
+            </tr>
+            <tr>
+              <th scope="row"><time datetime="20:30">20:30</time></th>
+              <td>Благодійний аукціон у перерві між блоками програми</td>
+              <td>Клуб Bel etage, головна сцена</td>
+            </tr>
+            <tr>
+              <th scope="row"><time datetime="21:00">21:00</time></th>
+              <td>Продовження концертної програми та завершення заходу</td>
+              <td>Клуб Bel etage, головна сцена</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section aria-labelledby="review-heading">
+        <h2 id="review-heading">Реєстрація та відгуки</h2>
+        <p>
+          Зареєструйтеся на подію або залиште свій відгук, щоб допомогти іншим
+          користувачам дізнатися більше.
+        </p>
+
+        <form id="review-form" action="" method="get">
+          <label for="user-name">Ім'я:</label>
+          <input
+            type="text"
+            autocomplete="name"
+            id="user-name"
+            name="userName"
+            required
+            minlength="3"
+            maxlength="50"
+            placeholder="Наприклад, Іван Петренко" aria-describedby="name-hint"
+          />
+          <br />
+
+          <label for="user-email">Електронна пошта:</label>
+          <input
+            type="email"
+            autocomplete="email"
+            id="user-email"
+            name="userEmail"
+            required aria-describedby="email-hint"
+          />
+          <br />
+
+          <label for="user-phone">Телефон:</label>
+          <input
+            type="tel"
+            autocomplete="tel"
+            id="user-phone"
+            name="userPhone"
+            pattern="^\+380\d{9}$" placeholder="Наприклад, +380951472563"
+            aria-describedby="phone-hint"
+          />
+          <p id="phone-hint">Необов'язково. Формат: +380XXXXXXXXX.</p>
+          <br />
+
+          <label for="ticket-count">Кількість квитків:</label>
+          <input
+            type="number"
+            id="ticket-count"
+            name="ticketCount"
+            min="1"
+            max="10"
+            value="1"
+            required
+            aria-describedby="ticket-hint"
+          />
+          <p id="ticket-hint">Виберіть кількість квитків, які ви придбали.</p>
+          <br />
+
+          <label for="hear-about">Звідки ви дізналися про подію:</label>
+          <input type="text" id="hear-about" name="source" list="source-list" aria-describedby="source-hint"/>
+          <datalist id="source-list">
+            <option value="Соціальні мережі"></option>
+            <option value="Рекомендація друзів"></option>
+            <option value="Зовнішня реклама"></option>
+            <option value="Пошук в інтернеті"></option>
+          </datalist>
+          <br />
+
+          <fieldset>
+            <legend>Оцінка події:</legend>
+            <label
+              ><input type="radio" name="rating" value="1" required aria-describedby="rating-hint"/> 1</label
+            >
+            <label><input type="radio" name="rating" value="2" aria-describedby="rating-hint"/> 2</label>
+            <label><input type="radio" name="rating" value="3" aria-describedby="rating-hint"/> 3</label>
+            <label><input type="radio" name="rating" value="4" aria-describedby="rating-hint"/> 4</label>
+            <label><input type="radio" name="rating" value="5" aria-describedby="rating-hint"/> 5</label>
+          </fieldset>
+          <br />
+
+          <label for="review-text">Відгук або коментар:</label>
+          <textarea
+            id="review-text"
+            name="review"
+            rows="4"
+            cols="50"
+            minlength="10"
+            maxlength="500"
+            placeholder="Напишіть свій відгук тут..."
+            required aria-describedby="review-hint"
+          ></textarea>
+          <p id="review-hint">Ваш відгук (мінімум 10 символів, максимум 500) буде опубліковано після перевірки.</p>
+          <br />
+
+          <label>
+            <input type="checkbox" name="consent" value="yes" required aria-describedby="consent-hint" />
+            Погоджуюсь з правилами публікації відгуків
+          </label>
+          <br /><br />
+
+          <button type="submit">Надіслати</button>
+          <a href="index.html#events-container" title="Повернутися до подій"
+            >Назад до подій</a
+          >
+        </form>
+      </section>
     </main>
     <footer>
-        <section id="contacts">
-            <h2>Контакти</h2>
-            <address>
-                <p>Електронна пошта: <a href="mailto:info@afishka.ua" title="Електронна пошта">info@afishka.ua</a></p>
-                <p>Контактний телефон: <a href="tel:+380123456789" title="Контактний телефон">+38 (012) 345-67-89</a>
-                </p>
-                <p>Адреса: <a href="https://maps.google.com/?q=Kyiv" title="Переглянути на карті" target="_blank">м.
-                        Київ, вул. Хрещатик, 1</a></p>
-            </address>
-        </section>
-        <small>&copy; 2026 Afishka. Розроблено: студент групи ІН-41/1 - Орехов Іван.</small>
-    </footer>
-</body>
+      <section id="contacts">
+        <h2>Контакти</h2>
+        <address>
+          <ul>
+            <li>
+              Електронна пошта:
+              <a href="mailto:info@afishka.ua" title="Електронна пошта"
+                >info@afishka.ua</a
+              >
+            </li>
 
+            <li>
+              Контактний телефон:
+              <a href="tel:+380123456789" title="Контактний телефон"
+                >+38 (012) 345-67-89</a
+              >
+            </li>
+
+            <li>
+              Адреса:
+              <a
+                href="https://maps.google.com/?q=Kyiv"
+                title="Переглянути на карті"
+                target="_blank"
+                >м. Київ, вул. Хрещатик, 1</a
+              >
+            </li>
+          </ul>
+        </address>
+      </section>
+      <section id="admin-section">
+        <h2>Адміністрування</h2>
+        <p>
+          <a href="admin.html" title="Перейти до адміністративної панелі"
+            >Редагування або додавання подій</a
+          >
+        </p>
+      </section>
+      <small
+        >&copy; 2026 Afishka. Розроблено: студент групи ІН-41/1 - Орехов
+        Іван.</small
+      >
+    </footer>
+  </body>
 </html>
