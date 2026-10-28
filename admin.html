@@ -180,7 +180,7 @@
             <br />
 
             <label for="event-category">Категорія:</label>
-            <select id="event-category" name="category" required aria-describedby="category-hint">
+            <select id="event-category" name="category" required>
               <option disabled selected value="">Оберіть категорію</option>
               <option class="category-option" value="concert">Концерт</option>
               <option class="category-option" value="lecture">Лекція</option>
@@ -199,7 +199,8 @@
               type="file"
               id="event-poster"
               name="poster"
-              accept="image/png, image/jpeg, image/webp" aria-describedby="poster-hint"
+              accept="image/png, image/jpeg, image/webp"
+              aria-describedby="poster-hint"
             />
             <p id="poster-hint">
               Необов'язково. Підтримувані формати: PNG, JPEG, WEBP.
@@ -216,7 +217,8 @@
               id="event-description"
               name="description"
               minlength="20"
-              maxlength="1000" aria-describedby="description-hint"
+              maxlength="1000"
+              aria-describedby="description-hint"
             ></textarea>
             <p id="description-hint">
               Необов'язково. Введіть детальний опис події (мінімум 20 символів,
@@ -232,7 +234,8 @@
               required
               min="0"
               max="10000"
-              step="0.01" aria-describedby="price-hint"
+              step="0.01"
+              aria-describedby="price-hint"
             />
             <p id="price-hint">
               Введіть ціну квитка (від 0 до 10000 грн, з кроком 0.01).
@@ -246,8 +249,13 @@
               name="eventDate"
               required
               min="2026-01-01T00:00"
-              max="2027-12-31T23:59" aria-describedby="date-hint"
+              max="2027-12-31T23:59"
+              aria-describedby="date-hint"
             />
+            <p id="date-hint">
+              Введіть дату та час проведення події (від 2026-01-01 до
+              2027-12-31).
+            </p>
             <br />
 
             <label for="event-location">Місце проведення:</label>
@@ -257,7 +265,8 @@
               name="location"
               required
               minlength="5"
-              maxlength="120" aria-describedby="location-hint"
+              maxlength="120"
+              aria-describedby="location-hint"
             />
             <p id="location-hint">
               Введіть місце проведення події (мінімум 5 символів, максимум 120
@@ -270,7 +279,7 @@
               Квитки у продажу </label
             ><br />
             <label>
-              <input type="checkbox" name="agreement" value="yes" required aria-describedby="agreement-hint" />
+              <input type="checkbox" name="agreement" value="yes" required />
               Погоджуюсь з умовами публікації події та підтверджую, що надана
               інформація є достовірною
             </label>

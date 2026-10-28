@@ -102,12 +102,16 @@
               required
               minlength="5"
               maxlength="100"
-              value="Благодійний концерт «Жадан і Собаки»" aria-describedby="title-hint"
+              value="Благодійний концерт «Жадан і Собаки»"
+              aria-describedby="title-hint"
             />
+            <p id="title-hint">
+              Введіть назву події (мінімум 5 символів, максимум 100 символів).
+            </p>
             <br />
 
             <label for="event-category">Категорія:</label>
-            <select id="event-category" name="category" required aria-describedby="category-hint">
+            <select id="event-category" name="category" required>
               <option disabled value="">Оберіть категорію</option>
               <option class="category-option" value="concert" selected>
                 Концерт
@@ -182,8 +186,13 @@
               required
               min="2026-01-01T00:00"
               max="2027-12-31T23:59"
-              value="2026-10-15T19:00" aria-describedby="date-hint"
+              value="2026-10-15T19:00"
+              aria-describedby="date-hint"
             />
+            <p id="date-hint">
+              Введіть дату та час проведення події (від 2026-01-01 до
+              2027-12-31).
+            </p>
             <br />
 
             <label for="event-location">Місце проведення:</label>
@@ -195,7 +204,7 @@
               minlength="5"
               maxlength="120"
               aria-describedby="location-hint"
-              value="м. Київ, клуб Bel etage" 
+              value="м. Київ, клуб Bel etage"
             />
             <p id="location-hint">
               Введіть місце проведення події (мінімум 5 символів, максимум 120
@@ -215,7 +224,7 @@
                 name="agreement"
                 value="yes"
                 required
-                checked aria-describedby="agreement-hint"
+                checked
               />
               Погоджуюсь з умовами публікації події та підтверджую, що надана
               інформація є достовірною

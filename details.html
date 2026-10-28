@@ -96,6 +96,7 @@
                 title="Перейти до реєстрації та відгуків про подію"
                 >Реєстрація та відгуки</a
               >
+            </li>
           </ul>
         </nav>
       </div>
@@ -257,8 +258,12 @@
             required
             minlength="3"
             maxlength="50"
-            placeholder="Наприклад, Іван Петренко" aria-describedby="name-hint"
+            placeholder="Наприклад, Іван Петренко"
+            aria-describedby="name-hint"
           />
+          <p id="name-hint">
+            Введіть своє ім'я (мінімум 3 символи, максимум 50).
+          </p>
           <br />
 
           <label for="user-email">Електронна пошта:</label>
@@ -267,8 +272,10 @@
             autocomplete="email"
             id="user-email"
             name="userEmail"
-            required aria-describedby="email-hint"
+            required
+            aria-describedby="email-hint"
           />
+          <p id="email-hint">Введіть дійсну електронну адресу.</p>
           <br />
 
           <label for="user-phone">Телефон:</label>
@@ -277,7 +284,8 @@
             autocomplete="tel"
             id="user-phone"
             name="userPhone"
-            pattern="^\+380\d{9}$" placeholder="Наприклад, +380951472563"
+            pattern="^\+380\d{9}$"
+            placeholder="Наприклад, +380951472563"
             aria-describedby="phone-hint"
           />
           <p id="phone-hint">Необов'язково. Формат: +380XXXXXXXXX.</p>
@@ -298,24 +306,33 @@
           <br />
 
           <label for="hear-about">Звідки ви дізналися про подію:</label>
-          <input type="text" id="hear-about" name="source" list="source-list" aria-describedby="source-hint"/>
+          <input
+            type="text"
+            id="hear-about"
+            name="source"
+            list="source-list"
+            aria-describedby="source-hint"
+          />
           <datalist id="source-list">
             <option value="Соціальні мережі"></option>
             <option value="Рекомендація друзів"></option>
             <option value="Зовнішня реклама"></option>
             <option value="Пошук в інтернеті"></option>
           </datalist>
+          <p id="source-hint">
+            Введіть або оберіть джерело інформації про подію.
+          </p>
           <br />
 
           <fieldset>
             <legend>Оцінка події:</legend>
             <label
-              ><input type="radio" name="rating" value="1" required aria-describedby="rating-hint"/> 1</label
+              ><input type="radio" name="rating" value="1" required /> 1</label
             >
-            <label><input type="radio" name="rating" value="2" aria-describedby="rating-hint"/> 2</label>
-            <label><input type="radio" name="rating" value="3" aria-describedby="rating-hint"/> 3</label>
-            <label><input type="radio" name="rating" value="4" aria-describedby="rating-hint"/> 4</label>
-            <label><input type="radio" name="rating" value="5" aria-describedby="rating-hint"/> 5</label>
+            <label><input type="radio" name="rating" value="2" /> 2</label>
+            <label><input type="radio" name="rating" value="3" /> 3</label>
+            <label><input type="radio" name="rating" value="4" /> 4</label>
+            <label><input type="radio" name="rating" value="5" /> 5</label>
           </fieldset>
           <br />
 
@@ -328,13 +345,17 @@
             minlength="10"
             maxlength="500"
             placeholder="Напишіть свій відгук тут..."
-            required aria-describedby="review-hint"
+            required
+            aria-describedby="review-hint"
           ></textarea>
-          <p id="review-hint">Ваш відгук (мінімум 10 символів, максимум 500) буде опубліковано після перевірки.</p>
+          <p id="review-hint">
+            Ваш відгук (мінімум 10 символів, максимум 500) буде опубліковано
+            після перевірки.
+          </p>
           <br />
 
           <label>
-            <input type="checkbox" name="consent" value="yes" required aria-describedby="consent-hint" />
+            <input type="checkbox" name="consent" value="yes" required />
             Погоджуюсь з правилами публікації відгуків
           </label>
           <br /><br />
