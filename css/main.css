@@ -2,6 +2,29 @@
 
 /* Шар reset — скидання базових стилів браузера */
 @layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  img,
+  video,
+  picture {
+    max-inline-size: 100%;
+    block-size: auto;
+  }
+
+  input,
+  button,
+  select,
+  textarea {
+    font: inherit;
+  }
 }
 
 /* Шар base — дизайн-токени з Figma, темна тема та базова типографіка */
