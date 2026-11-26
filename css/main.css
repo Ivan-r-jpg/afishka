@@ -29,7 +29,159 @@
 
 /* Шар base — дизайн-токени з Figma, темна тема та базова типографіка */
 @layer base {
+  :root {
+    color-scheme: light dark;
+
+    /* Кольорові токени (світла тема за макетом Figma) */
+    --color-bg: #faf8f5;
+    --color-surface: #ffffff;
+    --color-surface-alt: #f3effa;
+    --color-surface-soldout: #f1eff4;
+    --color-dark: #281345;
+    --color-on-dark: #f7f5fb;
+    --color-on-dark-muted: #cfc8dc;
+
+    --color-text: #21182f;
+    --color-muted: #645d6d;
+    --color-primary: #5823b9;
+    --color-primary-hover: #41178f;
+    --color-on-primary: #ffffff;
+    --color-accent: #d8f566;
+    --color-on-accent: #21182f;
+
+    --color-border: #8b8399;
+    --color-border-subtle: #e5e0ec;
+    --color-focus: #5823b9;
+    --color-error: #b91c1c;
+
+    --color-success-bg: #e7f6d5;
+    --color-success-text: #2b541b;
+    --color-soldout-bg: #e2dfe8;
+    --color-soldout-text: #4c4557;
+
+    /* Токени шрифтів */
+    --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --font-heading: 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
+
+    /* Шкала відступів */
+    --space-xs: 0.25rem;
+    --space-s: 0.5rem;
+    --space-m: 1rem;
+    --space-l: 1.75rem;
+    --space-xl: 2.5rem;
+
+    /* Радіуси та тіні */
+    --radius-sm: 8px;
+    --radius-card: 16px;
+    --radius-pill: 999px;
+    --shadow-card: 0 4px 16px rgba(33, 24, 47, 0.06);
+  }
+
+  /* Темна тема (перевизначення лише дизайн-токенів) */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-bg: #130e1c;
+      --color-surface: #1d152b;
+      --color-surface-alt: #281d3b;
+      --color-surface-soldout: #181322;
+      --color-dark: #0d0814;
+      --color-on-dark: #f7f5fb;
+      --color-on-dark-muted: #c2b8d4;
+
+      --color-text: #f4f1f9;
+      --color-muted: #b8afc7;
+      --color-primary: #a77dff;
+      --color-primary-hover: #c1a3ff;
+      --color-on-primary: #130e1c;
+      --color-accent: #d8f566;
+      --color-on-accent: #130e1c;
+
+      --color-border: #8e83a3;
+      --color-border-subtle: #35294a;
+      --color-focus: #d8f566;
+      --color-error: #f87171;
+
+      --color-success-bg: #1b3818;
+      --color-success-text: #a7f38e;
+      --color-soldout-bg: #2c2538;
+      --color-soldout-text: #c2b8d4;
+
+      --shadow-card: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  /* Загальні стилі документа */
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  main {
+    max-inline-size: 72rem;
+    margin-inline: auto;
+    padding-block: var(--space-l);
+    padding-inline: var(--space-m);
+  }
+
+  :where(h1, h2, h3) {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+    margin-block-start: var(--space-l);
+    margin-block-end: var(--space-s);
+  }
+
+  h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-block-start: 0;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  p {
+    margin-block-start: 0;
+    margin-block-end: var(--space-m);
+  }
+
+  a {
+    color: var(--color-primary);
+    text-underline-offset: 0.25em;
+  }
+
+  a:hover {
+    color: var(--color-primary-hover);
+  }
+
+  mark {
+    background-color: var(--color-accent);
+    color: var(--color-on-accent);
+    padding-inline: var(--space-xs);
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+  }
+
+  /* Видимий індикатор фокусу 3px (як у UI-кіті) */
+  :focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 2px;
+  }
 }
+
 
 /* Шар components — компоненти інтерфейсу (BEM) */
 @layer components {
