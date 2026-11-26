@@ -1,0 +1,17 @@
+@layer reset, base, components, utilities; /* Оголошення порядку каскадних шарів */
+
+/* Шар reset — скидання базових стилів браузера */
+@layer reset {
+}
+
+/* Шар base — дизайн-токени з Figma, темна тема та базова типографіка */
+@layer base {
+}
+
+/* Шар components — компоненти інтерфейсу (BEM) */
+@layer components {
+}
+
+/* Шар utilities — допоміжні класи */
+@layer utilities {
+}
