@@ -9,14 +9,13 @@
     />
     <link type="image/x-icon" sizes="32x32" rel="icon" href="favicon.ico" />
     <title>Про проєкт – Afishka</title>
-    <link rel="stylesheet" href="style.css" />
-    <!-- Додав для майбутньої стилізації (Поки що не використовується) -->
+    <link rel="stylesheet" href="css/main.css" />
     <script src="script.js" defer></script>
     <!-- Додав для майбутньої функціональності (Поки що не використовується) -->
   </head>
 
   <body>
-    <header>
+    <header class="site-header">
       <a href="index.html">
         <img
           fetchpriority="high"
@@ -34,63 +33,60 @@
         />
         Afishka
       </a>
-      <nav id="header-nav" aria-label="Основна навігація">
-        <ul>
-          <li class="nav-item">
+      <nav class="header-nav" aria-label="Основна навігація">
+        <ul class="nav-list">
+          <li class="nav-list__item">
             <a href="index.html" title="Перейти до головної сторінки"
               >Головна</a
             >
           </li>
-          <li class="nav-item">
-            <a
-              href="about.html"
-              aria-current="page"
-              title="Дізнатися більше інформації про нас"
-              >Про afishka</a
-            >
-          </li>
-          <li class="nav-item">
+          <li class="nav-list__item">
+  <a href="about.html" aria-current="page" title="Дізнатися більше інформації про нас">
+    Про afishka
+  </a>
+</li>
+          <li class="nav-list__item">
             <a href="#contacts" title="Перейти до контактів">Контакти</a>
           </li>
         </ul>
       </nav>
     </header>
-    <main>
-      <section id="about">
-        <h1>Про Afishka</h1>
-        <p>
+    <main id="main">
+      <section class="about-section">
+        <h1 class="about-section__title">Про Afishka</h1>
+        <p class="about-section__text">
           Сервіс Afishka створено для того, щоб допомогти людям знаходити
           актуальні події по всій Україні.<br />Ми прагнемо зробити культурне
           життя доступним та зручним для кожного користувача.
         </p>
-        <h2>Як користуватися сервісом</h2>
-        <ol>
-          <li>Перейдіть на головну сторінку</li>
-          <li>Використайте пошук, щоб знайти бажану подію</li>
-          <li>Виберіть тип події</li>
-          <li>Відфільтруйте результати</li>
-          <li>Оберіть потрібну подію, клікнувши на неї</li>
-          <li>Насолоджуйтесь простотою, що надає сервіс:)</li>
+        <h2 class="about-section__subtitle">Як користуватися сервісом</h2>
+        <ol class="about-section__list">
+          <li class="about-section__list-item">Перейдіть на головну сторінку</li>
+          <li class="about-section__list-item">Використайте пошук, щоб знайти бажану подію</li>
+          <li class="about-section__list-item">Виберіть тип події</li>
+          <li class="about-section__list-item">Відфільтруйте результати</li>
+          <li class="about-section__list-item">Оберіть потрібну подію, клікнувши на неї</li>
+          <li class="about-section__list-item">Насолоджуйтесь простотою, що надає сервіс:)</li>
         </ol>
-        <h2>Можливості сервісу, що будуть доступними вже зовсім скоро</h2>
-        <ul>
-          <li>Можливість додавати події до обраного</li>
-          <li>Можливість залишати відгуки та оцінки подій</li>
-          <li>Можливість ділитися подіями з друзями</li>
-          <li>Можливість отримувати персоналізовані рекомендації</li>
-          <li>
+        <h2 class="about-section__subtitle">Можливості сервісу, що будуть доступними вже зовсім скоро</h2>
+        <ul class="about-section__list">
+          <li class="about-section__list-item">Можливість додавати події до обраного</li>
+          <li class="about-section__list-item">Можливість залишати відгуки та оцінки подій</li>
+          <li class="about-section__list-item">Можливість ділитися подіями з друзями</li>
+          <li class="about-section__list-item">Можливість отримувати персоналізовані рекомендації</li>
+          <li class="about-section__list-item">
             Можливість насолоджуватися красивим та ненав'язливим інтерфейсом
           </li>
         </ul>
       </section>
-      <section id="about-video">
-        <h2>Відчуйте атмосферу українських подій</h2>
-        <p>
+      <section class="video-section">
+        <h2 class="video-section__title">Відчуйте атмосферу українських подій</h2>
+        <p class="video-section__text">
           Подивіться, як проходять культурні та музичні заходи, які об'єднують
           тисячі людей:
         </p>
 
-        <video
+        <video class="video-section__video"
           width="640"
           height="360"
           preload="metadata"
@@ -107,7 +103,7 @@
             label="Українська"
             default
           />
-          <p>
+          <p class="video-section__fallback-text">
             Ваш браузер не відтворює відео.
             <a href="media/event1.mp4" download title="Завантажити відео"
               >Завантажте відеофайл</a
@@ -115,28 +111,28 @@
           </p>
         </video>
       </section>
-      <section id="faq">
-        <h2>Часті запитання (FAQ)</h2>
+      <section class="faq-section">
+        <h2 class="faq-section__title">Часті запитання (FAQ)</h2>
 
-        <details name="faq-group" open>
-          <summary>Чи безкоштовне користування каталогом Afishka?</summary>
-          <p>
+        <details class="faq-section__detail" name="faq-group" open>
+          <summary class="faq-section__summary">Чи безкоштовне користування каталогом Afishka?</summary>
+          <p class="faq-section__text">
             Так, перегляд усіх подій, пошук за категоріями та розміщення нових
             анонсів на нашій платформі є повністю безкоштовними.
           </p>
         </details>
 
-        <details name="faq-group">
-          <summary>Як організатору додати власну подію на сайт?</summary>
-          <p>
+        <details class="faq-section__detail" name="faq-group">
+          <summary class="faq-section__summary">Як організатору додати власну подію на сайт?</summary>
+          <p class="faq-section__text">
             Аби додати нову подію необхідно перейти до панелі адміністрування, посилання на яку розташоване у футері сайту. 
             Після цього потрібно заповнити форму додавання події, вказавши усі необхідні дані.
           </p>
         </details>
 
-        <details name="faq-group">
-          <summary>Що робити у разі повітряної тривоги під час заходу?</summary>
-          <p>
+        <details class="faq-section__detail" name="faq-group">
+          <summary class="faq-section__summary">Що робити у разі повітряної тривоги під час заходу?</summary>
+          <p class="faq-section__text">
             Усі офлайн-локації наших партнерів обладнані сертифікованими
             укриттями або розташовані поруч із підземними станціями метро. У
             разі тривоги подія призупиняється, а глядачі проходять у безпечне
@@ -145,26 +141,26 @@
         </details>
       </section>
     </main>
-    <footer>
+    <footer class="site-footer">
       <section id="contacts">
         <h2>Контакти</h2>
         <address>
-          <ul>
-            <li>
+          <ul class="contact-list">
+            <li class="contact-list__item">
               Електронна пошта:
               <a href="mailto:info@afishka.ua" title="Електронна пошта"
                 >info@afishka.ua</a
               >
             </li>
 
-            <li>
+            <li class="contact-list__item">
               Контактний телефон:
               <a href="tel:+380123456789" title="Контактний телефон"
                 >+38 (012) 345-67-89</a
               >
             </li>
 
-            <li>
+            <li class="contact-list__item">
               Адреса:
               <a
                 href="https://maps.google.com/?q=Kyiv"
@@ -176,7 +172,7 @@
           </ul>
         </address>
       </section>
-      <section id="admin-section">
+      <section class="admin-section">
         <h2>Адміністрування</h2>
         <p>
           <a href="admin.html" title="Перейти до адміністративної панелі"

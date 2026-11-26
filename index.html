@@ -9,14 +9,14 @@
     />
     <link type="image/x-icon" sizes="32x32" rel="icon" href="favicon.ico" />
     <title>Каталог подій – Afishka</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <!-- Додав для майбутньої стилізації (Поки що не використовується) -->
     <script src="script.js" defer></script>
     <!-- Додав для майбутньої функціональності (Поки що не використовується) -->
   </head>
 
   <body>
-    <header>
+    <header class="site-header">
       <a href="index.html">
         <img
           fetchpriority="high"
@@ -34,9 +34,9 @@
         />
         Afishka
       </a>
-      <nav id="header-nav" aria-label="Основна навігація">
-        <ul>
-          <li class="nav-item">
+      <nav class="header-nav" aria-label="Основна навігація">
+        <ul class="nav-list">
+          <li class="nav-list__item">
             <a
               href="index.html"
               aria-current="page"
@@ -44,12 +44,12 @@
               >Головна</a
             >
           </li>
-          <li class="nav-item">
+          <li class="nav-list__item">
             <a href="about.html" title="Дізнатися більше інформації про нас"
               >Про afishka</a
             >
           </li>
-          <li class="nav-item">
+          <li class="nav-list__item">
             <a href="#contacts" title="Перейти до контактів">Контакти</a>
           </li>
         </ul>
@@ -57,36 +57,36 @@
     </header>
     <main id="main">
       <h1>Афіша подій України</h1>
-      <search id="header-search" aria-label="Пошук подій">
-        <form id="search-form">
-          <label for="search-input">Пошук подій:</label>
-          <input
+      <search class="header-search" id="header-search" aria-label="Пошук подій">
+        <form class="form" id="search-form">
+          <label class="form__label" for="search-input">Пошук подій:</label>
+          <input class="form__input"
             type="search"
             placeholder="Пошук подій"
             id="search-input"
             name="search"
           />
-          <button type="submit">Пошук</button>
+          <button class="button button--primary" type="submit">Пошук</button>
         </form>
       </search>
       <p><strong>Всі події</strong></p>
-      <ul id="category-list">
-        <li><button type="button" class="category-item">Концерти</button></li>
-        <li><button type="button" class="category-item">Вистави</button></li>
-        <li><button type="button" class="category-item">Лекції</button></li>
-        <li><button type="button" class="category-item">Інше</button></li>
+      <ul class="category-list">
+        <li><button class="category-list__item" type="button">Концерти</button></li>
+        <li><button class="category-list__item" type="button">Вистави</button></li>
+        <li><button class="category-list__item" type="button">Лекції</button></li>
+        <li><button class="category-list__item" type="button">Інше</button></li>
       </ul>
-      <label for="sorting-select">Сортувати за:</label>
-      <select id="sorting-select" name="sorting">
-        <option selected disabled value="">Оберіть параметр</option>
-        <option class="sorting-option" value="name">За назвою</option>
-        <option class="sorting-option" value="price">За ціною</option>
-        <option class="sorting-option" value="date">За датою</option>
+      <label class="form__label" for="sorting-select">Сортувати за:</label>
+      <select class="form__select" id="sorting-select" name="sorting">
+        <option class="form__option" selected disabled value="">Оберіть параметр</option>
+        <option class="form__option" value="name">За назвою</option>
+        <option class="form__option" value="price">За ціною</option>
+        <option class="form__option" value="date">За датою</option>
       </select>
       <section id="events-container">
         <h2>Популярні події на сьогодні:</h2>
         <article class="event-card">
-          <img
+          <img class="event-card__image"
             src="images/event1-L.png"
             srcset="
               images/event1-S.png  400w,
@@ -100,22 +100,23 @@
             title="Благодійний концерт «Жадан і Собаки»"
             loading="lazy"
           />
-          <h3>
+          <h3 class="event-card__title">
             <a href="details.html">Благодійний концерт «Жадан і Собаки»</a>
           </h3>
-          <p><strong>Категорія:</strong> Концерт</p>
-          <p>
+          <p class="event-card__category"><strong>Категорія:</strong> Концерт</p>
+          <p class="event-card__description">
             Презентація нового альбому та виконання головних хітів. Драйвова
             атмосфера та живий звук. Увесь прибуток від продажу квитків піде на
             підтримку ЗСУ.
           </p>
-          <p>Ціна: <data value="500">500 грн</data></p>
-          <p>Дата: <time datetime="2026-10-15">15.10.2026</time></p>
-          <p>Місце проведення: Київ, Bel etage</p>
+          <p class="event-card__price">Ціна: <data value="500">500 грн</data></p>
+          <p class="event-card__date">Дата: <time datetime="2026-10-15">15.10.2026</time></p>
+          <p class="event-card__venue">Місце проведення: Київ, Bel etage</p>
+          <p class="event-card__status" data-status="available">Квитки у продажу</p>
         </article>
 
         <article class="event-card">
-          <img
+          <img class="event-card__image"
             src="images/event2-L.png"
             srcset="
               images/event2-S.png  400w,
@@ -129,24 +130,25 @@
             title="Лекція: «Архітектура сучасних вебзастосунків»"
             loading="lazy"
           />
-          <h3>
+          <h3 class="event-card__title">
             <a href="details.html"
               >Лекція: «Архітектура сучасних вебзастосунків»</a
             >
           </h3>
-          <p><strong>Категорія:</strong> Лекція</p>
-          <p>
+          <p class="event-card__category"><strong>Категорія:</strong> Лекція</p>
+          <p class="event-card__description">
             Огляд сучасних патернів проєктування, побудова надійного REST API та
             оптимізація взаємодії з базами даних. Ідеально підійде для
             студентів-розробників та джуніорів.
           </p>
-          <p>Ціна: <data value="150">150 грн</data></p>
-          <p>Дата: <time datetime="2026-10-20">20.10.2026</time></p>
-          <p>Місце проведення: Суми, Конгрес-центр СумДУ</p>
+          <p class="event-card__price">Ціна: <data value="150">150 грн</data></p>
+          <p class="event-card__date">Дата: <time datetime="2026-10-20">20.10.2026</time></p>
+          <p class="event-card__venue">Місце проведення: Суми, Конгрес-центр СумДУ</p>
+          <p class="event-card__status" data-status="available">Квитки у продажу</p>
         </article>
 
         <article class="event-card">
-          <img
+          <img class="event-card__image"
             src="images/event3-L.png"
             srcset="
               images/event3-S.png  400w,
@@ -160,19 +162,20 @@
             title="Виставка: «Сенси та Форми»"
             loading="lazy"
           />
-          <h3><a href="details.html">Виставка: «Сенси та Форми»</a></h3>
-          <p><strong>Категорія:</strong> Виставка</p>
-          <p>
+          <h3 class="event-card__title"><a href="details.html">Виставка: «Сенси та Форми»</a></h3>
+          <p class="event-card__category"><strong>Категорія:</strong> Виставка</p>
+          <p class="event-card__description">
             Масштабна експозиція робіт молодих українських митців. На вас
             чекають сучасний живопис, незвичні скульптури та інтерактивні
             візуальні інсталяції.
           </p>
-          <p>Ціна: <data value="200">200 грн</data></p>
-          <p>Дата: <time datetime="2026-11-05">05.11.2026</time></p>
-          <p>Місце проведення: Львів, Палац Мистецтв</p>
+          <p class="event-card__price">Ціна: <data value="200">200 грн</data></p>
+          <p class="event-card__date">Дата: <time datetime="2026-11-05">05.11.2026</time></p>
+          <p class="event-card__venue">Місце проведення: Львів, Палац Мистецтв</p>
+          <p class="event-card__status" data-status="sold-out">Квитки розпродано</p>
         </article>
         <article class="event-card">
-          <img
+          <img class="event-card__image"
             src="images/event4-L.png"
             srcset="
               images/event4-S.png  400w,
@@ -186,19 +189,20 @@
             title="Вистава «Конотопська відьма»"
             loading="lazy"
           />
-          <h3><a href="details.html">Вистава «Конотопська відьма»</a></h3>
-          <p><strong>Категорія:</strong> Вистави</p>
-          <p>
+          <h3 class="event-card__title"><a href="details.html">Вистава «Конотопська відьма»</a></h3>
+          <p class="event-card__category"><strong>Категорія:</strong> Вистави</p>
+          <p class="event-card__description">
             Сучасне прочитання класичного твору. Яскрава сценографія, містика та
             неперевершена гра акторів, яка залишить незабутні враження.
           </p>
-          <p>Ціна: <data value="300">300 грн</data></p>
-          <p>Дата: <time datetime="2026-11-12">12.11.2026</time></p>
-          <p>Місце проведення: Суми, Театр ім. Щепкіна</p>
+          <p class="event-card__price">Ціна: <data value="300">300 грн</data></p>
+          <p class="event-card__date">Дата: <time datetime="2026-11-12">12.11.2026</time></p>
+          <p class="event-card__venue">Місце проведення: Суми, Театр ім. Щепкіна</p>
+          <p class="event-card__status" data-status="available">Квитки у продажу</p>
         </article>
 
         <article class="event-card">
-          <img
+          <img class="event-card__image"
             src="images/event5-L.png"
             srcset="
               images/event5-S.png  400w,
@@ -212,19 +216,20 @@
             title="Великий Стендап Концерт"
             loading="lazy"
           />
-          <h3><a href="details.html">Великий Стендап Концерт</a></h3>
-          <p><strong>Категорія:</strong> Інше</p>
-          <p>
+          <h3 class="event-card__title"><a href="details.html">Великий Стендап Концерт</a></h3>
+          <p class="event-card__category"><strong>Категорія:</strong> Інше</p>
+          <p class="event-card__description">
             Найкращі коміки країни збираються на одній сцені, щоб подарувати
             вечір гострої комедії, життєвих історій та імпровізації з глядачами.
           </p>
-          <p>Ціна: <data value="400">400 грн</data></p>
-          <p>Дата: <time datetime="2026-10-25">25.10.2026</time></p>
-          <p>Місце проведення: Київ, Жовтневий палац</p>
+          <p class="event-card__price">Ціна: <data value="400">400 грн</data></p>
+          <p class="event-card__date">Дата: <time datetime="2026-10-25">25.10.2026</time></p>
+          <p class="event-card__venue">Місце проведення: Київ, Жовтневий палац</p>
+          <p class="event-card__status" data-status="available">Квитки у продажу</p>
         </article>
 
         <article class="event-card">
-          <img
+          <img class="event-card__image"
             src="images/event6-L.png"
             srcset="
               images/event6-S.png  400w,
@@ -238,41 +243,42 @@
             title="Воркшоп: «Основи Git та GitHub»"
             loading="lazy"
           />
-          <h3><a href="details.html">Воркшоп: «Основи Git та GitHub»</a></h3>
-          <p><strong>Категорія:</strong> Лекції</p>
-          <p>
+          <h3 class="event-card__title"><a href="details.html">Воркшоп: «Основи Git та GitHub»</a></h3>
+          <p class="event-card__category"><strong>Категорія:</strong> Лекції</p>
+          <p class="event-card__description">
             Практичне заняття для розробників. Навчимося створювати репозиторії,
             працювати з feature-гілками та вирішувати конфлікти при злитті коду.
           </p>
-          <p>Ціна: <data value="0">Безкоштовно</data></p>
-          <p>Дата: <time datetime="2026-10-30">30.10.2026</time></p>
-          <p>Місце проведення: Онлайн (Zoom)</p>
+          <p class="event-card__price">Ціна: <data value="0">Безкоштовно</data></p>
+          <p class="event-card__date">Дата: <time datetime="2026-10-30">30.10.2026</time></p>
+          <p class="event-card__venue">Місце проведення: Онлайн (Zoom)</p>
+          <p class="event-card__status" data-status="available">Квитки у продажу</p>
         </article>
       </section>
-      <aside id="interesting-facts">
-        <h2>Цікаво знати</h2>
-        <p>
+      <aside class="interesting-facts" id="interesting-facts">
+        <h2 class="interesting-facts__title">Цікаво знати</h2>
+        <p class="interesting-facts__text">
           На Afishka можна знайти концерти, вистави, лекції та інші цікаві події
           в Україні.
         </p>
       </aside>
     </main>
-    <footer>
+    <footer class="site-footer">
       <section id="contacts">
         <h2>Контакти</h2>
         <address>
-          <ul>
-            <li>Електронна пошта:
+          <ul class="contact-list">
+            <li class="contact-list__item">Електронна пошта:
             <a href="mailto:info@afishka.ua" title="Електронна пошта"
               >info@afishka.ua</a
             ></li>
    
-            <li>Контактний телефон:
+            <li class="contact-list__item">Контактний телефон:
             <a href="tel:+380123456789" title="Контактний телефон"
               >+38 (012) 345-67-89</a
             ></li>
   
-            <li>Адреса:
+            <li class="contact-list__item">Адреса:
             <a
               href="https://maps.google.com/?q=Kyiv"
               title="Переглянути на карті"
@@ -282,7 +288,7 @@
           </ul>
         </address>
       </section>
-        <section id="admin-section">
+        <section class="admin-section">
         <h2>Адміністрування</h2>
         <p>
             <a href="admin.html" title="Перейти до адміністративної панелі"

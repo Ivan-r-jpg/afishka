@@ -11,14 +11,12 @@
     <title>
       Редагування події "Благoдійний концерт «Жадан і Собаки»" – Afishka
     </title>
-    <link rel="stylesheet" href="style.css" />
-    <!-- Додав для майбутньої стилізації (Поки що не використовується) -->
+    <link rel="stylesheet" href="css/main.css" />
     <script src="script.js" defer></script>
     <!-- Додав для майбутньої функціональності (Поки що не використовується) -->
   </head>
-
   <body>
-    <header>
+    <header class="site-header">
       <a href="index.html">
         <img
           fetchpriority="high"
@@ -36,19 +34,19 @@
         />
         Afishka
       </a>
-      <nav id="header-nav" aria-label="Основна навігація">
-        <ul>
-          <li class="nav-item">
+      <nav class="header-nav" aria-label="Основна навігація">
+        <ul class="nav-list">
+          <li class="nav-list__item">
             <a href="index.html" title="Перейти до головної сторінки"
               >Головна</a
             >
           </li>
-          <li class="nav-item">
+          <li class="nav-list__item">
             <a href="about.html" title="Дізнатися більше інформації про нас"
               >Про afishka</a
             >
           </li>
-          <li class="nav-item">
+          <li class="nav-list__item">
             <a href="#contacts" title="Перейти до контактів">Контакти</a>
           </li>
         </ul>
@@ -56,33 +54,31 @@
     </header>
     <main id="main">
       <h1>Благодійний концерт «Жадан і Собаки»</h1>
-      <div id="detail-navigation">
-        <nav id="breadcrumbs" aria-label="Хлібні крихти">
-          <ol>
-            <li>
+      <div class="breadcrumbs-container">
+        <nav class="breadcrumbs" aria-label="Хлібні крихти">
+          <ol class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
               <a href="admin.html" title="Перейти до сторінки адміністрування"
                 >Адміністрування</a
               >
             </li>
-            <li>
-              <a aria-current="page"
-                >Редагування події - Благодійний концерт «Жадан і Собаки»</a
-              >
+            <li class="breadcrumbs__item" aria-current="page">
+                Редагування події - Благодійний концерт «Жадан і Собаки»
             </li>
           </ol>
         </nav>
       </div>
-      <section aria-labelledby="edit-event">
+      <section class="event-edit-section" aria-labelledby="edit-event">
         <h2 id="edit-event">Редагування події</h2>
 
-        <form id="event-edit-form" method="get">
+        <form class="form" method="get">
           <input type="hidden" name="eventId" value="1" />
 
-          <fieldset>
-            <legend>Основні дані події</legend>
+          <fieldset class="form__group">
+            <legend class="form__legend">Основні дані події</legend>
 
-            <label for="event-code">Артикул події:</label>
-            <input
+            <label class="form__label" for="event-code">Артикул події:</label>
+            <input class="form__input"
               type="text"
               id="event-code"
               name="eventCode"
@@ -91,11 +87,10 @@
               aria-describedby="code-hint"
               value="AF-1001"
             />
-            <p id="code-hint">Формат: AF- та 4 цифри (наприклад, AF-1024)</p>
-            <br />
+            <p id="code-hint" class="form__hint">Формат: AF- та 4 цифри (наприклад, AF-1024)</p>
 
-            <label for="event-title">Назва події:</label>
-            <input
+            <label class="form__label" for="event-title">Назва події:</label>
+            <input class="form__input"
               type="text"
               id="event-title"
               name="title"
@@ -105,13 +100,12 @@
               value="Благодійний концерт «Жадан і Собаки»"
               aria-describedby="title-hint"
             />
-            <p id="title-hint">
+            <p id="title-hint" class="form__hint">
               Введіть назву події (мінімум 5 символів, максимум 100 символів).
             </p>
-            <br />
 
-            <label for="event-category">Категорія:</label>
-            <select id="event-category" name="category" required>
+            <label class="form__label" for="event-category">Категорія:</label>
+            <select class="form__select" id="event-category" name="category" required>
               <option disabled value="">Оберіть категорію</option>
               <option class="category-option" value="concert" selected>
                 Концерт
@@ -125,26 +119,25 @@
               </option>
               <option class="category-option" value="other">Інше</option>
             </select>
-            <br />
 
-            <label for="event-poster">Постер (зображення):</label>
-            <input
+            <label class="form__label" for="event-poster">Постер (зображення):</label>
+            <input class="form__input"
               type="file"
               id="event-poster"
               name="poster"
               accept="image/png, image/jpeg, image/webp"
               aria-describedby="poster-hint"
             />
-            <p id="poster-hint">
+            <p id="poster-hint" class="form__hint">
               Необов'язково. Підтримувані формати: PNG, JPEG, WEBP.
             </p>
           </fieldset>
 
-          <fieldset>
-            <legend>Опис і наявність</legend>
+          <fieldset class="form__group">
+            <legend class="form__legend">Опис і наявність</legend>
 
-            <label for="event-description">Опис події:</label>
-            <textarea
+            <label class="form__label" for="event-description">Опис події:</label>
+            <textarea class="form__textarea"
               rows="4"
               cols="40"
               id="event-description"
@@ -155,14 +148,13 @@
             >
 Презентація нового альбому та виконання головних хітів. Драйвова атмосфера та живий звук. Увесь прибуток від продажу квитків піде на підтримку ЗСУ.</textarea
             >
-            <p id="description-hint">
+            <p id="description-hint" class="form__hint">
               Необов'язково. Введіть детальний опис події (мінімум 20 символів,
               максимум 1000 символів).
             </p>
-            <br />
 
-            <label for="event-price">Ціна (грн):</label>
-            <input
+            <label class="form__label" for="event-price">Ціна (грн):</label>
+            <input class="form__input"
               type="number"
               id="event-price"
               name="ticketPrice"
@@ -173,13 +165,12 @@
               value="500"
               aria-describedby="price-hint"
             />
-            <p id="price-hint">
+            <p id="price-hint" class="form__hint">
               Введіть ціну квитка (від 0 до 10000 грн, з кроком 0.01).
             </p>
-            <br />
 
-            <label for="event-date">Дата проведення:</label>
-            <input
+            <label class="form__label" for="event-date">Дата проведення:</label>
+            <input class="form__input"
               type="datetime-local"
               id="event-date"
               name="eventDate"
@@ -189,14 +180,13 @@
               value="2026-10-15T19:00"
               aria-describedby="date-hint"
             />
-            <p id="date-hint">
+            <p id="date-hint" class="form__hint">
               Введіть дату та час проведення події (від 2026-01-01 до
               2027-12-31).
             </p>
-            <br />
 
-            <label for="event-location">Місце проведення:</label>
-            <input
+            <label class="form__label" for="event-location">Місце проведення:</label>
+            <input class="form__input"
               type="text"
               id="event-location"
               name="location"
@@ -206,21 +196,20 @@
               aria-describedby="location-hint"
               value="м. Київ, клуб Bel etage"
             />
-            <p id="location-hint">
+            <p id="location-hint" class="form__hint">
               Введіть місце проведення події (мінімум 5 символів, максимум 120
               символів).
             </p>
-            <br />
 
-            <label>
-              <input type="checkbox" name="inStock" value="yes" checked />
+            <label class="form__label" for="inStock">
+              <input class="form__checkbox" type="checkbox" id="inStock" name="inStock" value="yes" checked />
               Квитки у продажу
             </label>
-            <br />
 
-            <label>
-              <input
+            <label class="form__label" for="agreement">
+              <input class="form__checkbox"
                 type="checkbox"
+                id="agreement"
                 name="agreement"
                 value="yes"
                 required
@@ -231,35 +220,34 @@
             </label>
           </fieldset>
 
-          <button id="save-button" type="submit">Зберегти зміни</button>
-          <button id="reset-button" type="reset">Скасувати зміни</button>
-          <br /><br />
+          <button class="button button--primary" type="submit">Зберегти зміни</button>
+          <button class="button button--secondary" type="reset">Скасувати зміни</button>
           <a href="admin.html" class="back-link"
             >Повернутися до адміністрування</a
           >
         </form>
       </section>
     </main>
-    <footer>
+    <footer class="site-footer">
       <section id="contacts">
         <h2>Контакти</h2>
         <address>
-          <ul>
-            <li>
+          <ul class="contact-list">
+            <li class="contact-list__item">
               Електронна пошта:
               <a href="mailto:info@afishka.ua" title="Електронна пошта"
                 >info@afishka.ua</a
               >
             </li>
 
-            <li>
+            <li class="contact-list__item">
               Контактний телефон:
               <a href="tel:+380123456789" title="Контактний телефон"
                 >+38 (012) 345-67-89</a
               >
             </li>
 
-            <li>
+            <li class="contact-list__item">
               Адреса:
               <a
                 href="https://maps.google.com/?q=Kyiv"
@@ -271,7 +259,7 @@
           </ul>
         </address>
       </section>
-      <section id="admin-section">
+      <section class="admin-section">
         <h2>Адміністрування</h2>
         <p>
           <a href="admin.html" title="Перейти до адміністративної панелі"
