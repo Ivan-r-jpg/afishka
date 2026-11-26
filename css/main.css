@@ -185,6 +185,649 @@
 
 /* Шар components — компоненти інтерфейсу (BEM) */
 @layer components {
+  /* Шапка та головна навігація */
+  .site-header {
+    background-color: var(--color-surface);
+    border-block-end: 1px solid var(--color-border-subtle);
+    padding-block: var(--space-m);
+    padding-inline: var(--space-l);
+  }
+
+  .site-header > a {
+    display: inline-block;
+    font-size: 1.35rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--color-text);
+    margin-inline-end: var(--space-xl);
+    margin-block-end: var(--space-s);
+  }
+
+  .site-header > a img {
+    max-inline-size: 2.25rem;
+    vertical-align: middle;
+    margin-inline-end: var(--space-xs);
+    border-radius: var(--radius-sm);
+  }
+
+  .header-nav {
+    display: inline-block;
+  }
+
+  .nav-list,
+  .header-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-list__item,
+  .nav-item {
+    display: inline-block;
+    margin-inline-end: var(--space-m);
+  }
+
+  .header-nav a {
+    display: inline-block;
+    padding-block: var(--space-xs);
+    padding-inline: var(--space-s);
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .header-nav a:hover {
+    color: var(--color-primary);
+  }
+
+  /* Активна сторінка: фіолетовий текст і підкреслення (як у макеті) */
+  .header-nav a[aria-current='page'] {
+    color: var(--color-primary);
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.35em;
+  }
+
+  /* Темний підвал сайту (#281345) */
+  .site-footer {
+    background-color: var(--color-dark);
+    color: var(--color-on-dark-muted);
+    margin-block-start: var(--space-xl);
+    padding-block: var(--space-xl);
+    padding-inline: var(--space-m);
+  }
+
+  .site-footer > * {
+    max-inline-size: 72rem;
+    margin-inline: auto;
+  }
+
+  .site-footer h2 {
+    font-size: 1.1rem;
+    color: var(--color-on-dark);
+    margin-block-start: var(--space-m);
+    margin-block-end: var(--space-s);
+  }
+
+  .site-footer address {
+    font-style: normal;
+  }
+
+  .site-footer a {
+    color: var(--color-on-dark);
+  }
+
+  .site-footer .admin-section a {
+    color: var(--color-accent);
+    font-weight: 600;
+  }
+
+  .site-footer a[aria-current='page'] {
+    text-decoration-thickness: 2px;
+  }
+
+  .contact-list {
+    list-style: none;
+    padding: 0;
+    margin-block: var(--space-s);
+  }
+
+  .contact-list__item {
+    margin-block-end: var(--space-xs);
+  }
+
+  .site-footer small {
+    display: block;
+    margin-block-start: var(--space-l);
+    padding-block-start: var(--space-m);
+    border-block-start: 1px solid rgba(255, 255, 255, 0.14);
+    color: var(--color-on-dark-muted);
+  }
+
+  /* Хлібні крихти та навігація по деталях */
+  .breadcrumbs {
+    margin-block-end: var(--space-m);
+  }
+
+  .breadcrumbs__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .breadcrumbs__item {
+    display: inline;
+    font-size: 0.9rem;
+    color: var(--color-muted);
+  }
+
+  .breadcrumbs__item + .breadcrumbs__item::before {
+    content: '/';
+    margin-inline: var(--space-s);
+    color: var(--color-border);
+  }
+
+  .breadcrumbs__item[aria-current='page'] {
+    color: var(--color-text);
+    font-weight: 600;
+  }
+
+  .event-nav__list {
+    list-style: none;
+    padding: 0;
+    margin-block: var(--space-s) var(--space-l);
+  }
+
+  .event-nav__item {
+    display: inline-block;
+    margin-inline-end: var(--space-s);
+    margin-block-end: var(--space-xs);
+  }
+
+  .event-nav__item a {
+    display: inline-block;
+    padding-block: var(--space-s);
+    padding-inline: var(--space-m);
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .event-nav__item a:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-on-primary);
+  }
+
+  /* Пошук та фільтри категорій */
+  .header-search {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-card);
+    padding: var(--space-m);
+    margin-block-end: var(--space-m);
+  }
+
+  .category-list {
+    list-style: none;
+    padding: 0;
+    margin-block: var(--space-s) var(--space-m);
+  }
+
+  .category-list li {
+    display: inline-block;
+    margin-inline-end: var(--space-s);
+    margin-block-end: var(--space-s);
+  }
+
+  .category-list__item {
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-sm);
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .category-list__item:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-on-primary);
+  }
+
+  /* Картка події (лаймова дата + приглушення sold-out) */
+  .event-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    padding: var(--space-l);
+    margin-block-end: var(--space-l);
+    max-inline-size: 38rem;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  /* Плавне збільшення ТІЛЬКИ для доступних карток */
+  .event-card:not(:has([data-status='sold-out'])):hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 28px rgba(33, 24, 47, 0.14);
+  }
+
+  /* Неактивна картка "Квитки розпродано" */
+  .event-card:has([data-status='sold-out']) {
+    background-color: var(--color-surface-soldout);
+    border-style: dashed;
+    border-color: var(--color-border);
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+
+  /* Вимикаємо наведення та клік на посиланні всередині недоступної картки */
+  .event-card:has([data-status='sold-out']) .event-card__title a {
+    pointer-events: none;
+    color: var(--color-muted);
+  }
+
+  .event-card__image {
+    display: block;
+    inline-size: 100%;
+    max-block-size: 16rem;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    margin-block-end: var(--space-m);
+  }
+
+  .event-card__title {
+    margin-block-start: 0;
+    margin-block-end: var(--space-s);
+    font-size: 1.3rem;
+  }
+
+  .event-card__title a {
+    text-decoration: none;
+    color: var(--color-text);
+  }
+
+  .event-card__title a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+
+  .event-card__category {
+    display: inline-block;
+    background-color: var(--color-surface-alt);
+    color: var(--color-primary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding-block: var(--space-xs);
+    padding-inline: 0.75rem;
+    border-radius: var(--radius-sm);
+    margin-block-end: var(--space-s);
+    margin-inline-end: var(--space-s);
+  }
+
+  /* Виділена дата лаймовим акцентом #D8F566 */
+  .event-card__date {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: var(--color-on-accent);
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding-block: var(--space-xs);
+    padding-inline: 0.75rem;
+    border-radius: var(--radius-sm);
+    margin-block-end: var(--space-s);
+  }
+
+  .event-card__description {
+    max-inline-size: 65ch;
+    color: var(--color-muted);
+  }
+
+  .event-card__venue {
+    color: var(--color-text);
+    font-weight: 500;
+    margin-block-end: var(--space-xs);
+  }
+
+  .event-card__price {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--color-text);
+    margin-block-end: var(--space-s);
+  }
+
+  .event-card__status {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding-block: var(--space-xs);
+    padding-inline: 0.75rem;
+    border-radius: var(--radius-sm);
+    margin-block-end: 0;
+  }
+
+  .event-card__status[data-status='available'] {
+    background-color: var(--color-success-bg);
+    color: var(--color-success-text);
+  }
+
+  .event-card__status[data-status='available']::before {
+    content: '✓ ';
+  }
+
+  .event-card__status[data-status='sold-out'] {
+    background-color: var(--color-soldout-bg);
+    color: var(--color-soldout-text);
+  }
+
+  .event-card__status[data-status='sold-out']::before {
+    content: '× ';
+  }
+
+  /* Приглушення картки sold-out за правилом UI-кіта: тло + фото, текст залишається контрастним */
+  .event-card:has([data-status='sold-out']) {
+    background-color: var(--color-surface-soldout);
+    border-style: dashed;
+    border-color: var(--color-border);
+    box-shadow: none;
+  }
+
+  .event-card:has([data-status='sold-out']) .event-card__image {
+    filter: grayscale(100%) opacity(0.65);
+  }
+
+  .event-card:has([data-status='sold-out']) .event-card__date {
+    background-color: var(--color-soldout-bg);
+    color: var(--color-soldout-text);
+  }
+
+  /* Обмеження довжини рядка та інфоблоки */
+  .about-section__text,
+  .about-section__list,
+  .video-section__text,
+  .event-description__text,
+  .event-reviews__text,
+  .interesting-facts__text {
+    max-inline-size: 65ch;
+  }
+
+  .event-description__figure {
+    margin-inline: 0;
+    margin-block: var(--space-m);
+    max-inline-size: 48rem;
+  }
+
+  .event-description__figure img {
+    border-radius: var(--radius-card);
+  }
+
+  .event-description__caption {
+    margin-block-start: var(--space-xs);
+    font-size: 0.88rem;
+    color: var(--color-muted);
+  }
+
+  .interesting-facts {
+    background-color: var(--color-surface-alt);
+    border-radius: var(--radius-card);
+    padding: var(--space-l);
+    margin-block-start: var(--space-xl);
+  }
+
+  .interesting-facts__title {
+    margin-block-start: 0;
+  }
+
+  /* Список визначень <dl> (деталі події) */
+  .event-specs {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-card);
+    padding: var(--space-l);
+    max-inline-size: 36rem;
+  }
+
+  .event-specs__item {
+    padding-block: var(--space-s);
+    border-block-end: 1px solid var(--color-border-subtle);
+  }
+
+  .event-specs__item:last-child {
+    border-block-end: none;
+  }
+
+  .event-specs__label {
+    font-size: 0.85rem;
+    color: var(--color-muted);
+  }
+
+  .event-specs__value {
+    margin-inline-start: 0;
+    margin-block-start: var(--space-xs);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--color-text);
+  }
+
+  /* Таблиці даних (темна шапка #281345 + зебра) */
+  .event-table {
+    inline-size: 100%;
+    border-collapse: collapse;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    margin-block: var(--space-m);
+  }
+
+  .event-table__caption {
+    text-align: start;
+    font-weight: 700;
+    color: var(--color-muted);
+    margin-block-end: var(--space-s);
+  }
+
+  .event-table__header,
+  .event-table__data {
+    padding-block: 0.85rem;
+    padding-inline: var(--space-m);
+    border-block-end: 1px solid var(--color-border-subtle);
+    text-align: start;
+  }
+
+  .event-table__header {
+    background-color: var(--color-dark);
+    color: var(--color-on-dark);
+    font-weight: 700;
+  }
+
+  .event-table__body .event-table__row:nth-child(even) {
+    background-color: var(--color-surface-alt);
+  }
+
+  .event-table__header--numeric,
+  .event-table__data--numeric {
+    text-align: end;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Блок частих запитань <details> / <summary> */
+  .faq-section__detail {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-card);
+    padding: var(--space-m) var(--space-l);
+    margin-block-end: var(--space-s);
+    max-inline-size: 65ch;
+  }
+
+  .faq-section__summary {
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .faq-section__summary::before {
+    content: '+ ';
+    color: var(--color-primary);
+    font-weight: 800;
+    margin-inline-end: var(--space-s);
+  }
+
+  .faq-section__detail[open] .faq-section__summary::before {
+    content: '− ';
+  }
+
+  .faq-section__text {
+    margin-block-start: var(--space-s);
+    margin-block-end: 0;
+    color: var(--color-muted);
+  }
+
+  /* Форми */
+  .form {
+    max-inline-size: 40rem;
+  }
+
+  .form__fieldset,
+  .form__group {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-card);
+    padding: var(--space-l);
+    margin-inline: 0;
+    margin-block-end: var(--space-l);
+  }
+
+  .form__legend {
+    font-weight: 800;
+    font-size: 1.1rem;
+    padding-inline: var(--space-s);
+    color: var(--color-text);
+  }
+
+  .form__label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-block-start: var(--space-m);
+    margin-block-end: var(--space-xs);
+  }
+
+  .form__label:first-of-type {
+    margin-block-start: 0;
+  }
+
+  .form__input,
+  .form__select,
+  .form__textarea {
+    display: block;
+    inline-size: 100%;
+    padding-block: 0.65rem;
+    padding-inline: 0.85rem;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-sm);
+  }
+
+  .form__input::placeholder,
+  .form__textarea::placeholder {
+    color: var(--color-muted);
+  }
+
+  /* Стан некоректного значення: червона рамка + потовщення + значок у підказці */
+  .form__input:user-invalid,
+  .form__select:user-invalid,
+  .form__textarea:user-invalid {
+    border-color: var(--color-error);
+    border-width: 2px;
+    border-inline-start-width: 5px;
+  }
+
+  .form__input:user-invalid + .form__hint::before,
+  .form__textarea:user-invalid + .form__hint::before {
+    content: '! ';
+    color: var(--color-error);
+    font-weight: 800;
+  }
+
+  .form__hint {
+    font-size: 0.85rem;
+    color: var(--color-muted);
+    margin-block-start: var(--space-xs);
+    margin-block-end: var(--space-s);
+  }
+
+  .form__checkbox,
+  .form__radio {
+    accent-color: var(--color-primary);
+    margin-inline-end: var(--space-xs);
+    inline-size: 1.15em;
+    block-size: 1.15em;
+    vertical-align: middle;
+  }
+
+  .form__label:has(.form__radio) {
+    display: inline-block;
+    margin-inline-end: var(--space-m);
+    margin-block-start: var(--space-xs);
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .form__label:has(.form__checkbox) {
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  /* Кнопки (мінімальна висота 48px за UI-кітом) */
+  .button {
+    display: inline-block;
+    min-block-size: 48px;
+    padding-block: 0.65rem;
+    padding-inline: 1.5rem;
+    border-radius: var(--radius-sm);
+    border: 2px solid transparent;
+    font-weight: 700;
+    cursor: pointer;
+    margin-inline-end: var(--space-s);
+    margin-block-start: var(--space-s);
+  }
+
+  .button--primary {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+  }
+
+  .button--primary:hover {
+    background-color: var(--color-primary-hover);
+  }
+
+  .button--secondary {
+    background-color: var(--color-surface);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+
+  .button--secondary:hover {
+    background-color: var(--color-surface-alt);
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-block-start: var(--space-m);
+    font-weight: 600;
+  }
 }
 
 /* Шар utilities — допоміжні класи */
