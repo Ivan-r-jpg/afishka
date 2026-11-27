@@ -16,7 +16,7 @@
 
   <body>
     <header class="site-header">
-      <a href="index.html">
+      <a class="site-header__logo" href="index.html">
         <img
           fetchpriority="high"
           src="images/afishkalogo-L.png"
@@ -54,98 +54,146 @@
     <main id="main">
       <h1>Адміністративна панель</h1>
       <p>
-        Дана сторінка є навчальною версією адміністративної панелі. Посилання
-        в підвалі та перевірка полів у браузері не захищають дані. Остаточний
+        Дана сторінка є навчальною версією адміністративної панелі. Посилання в
+        підвалі та перевірка полів у браузері не захищають дані. Остаточний
         контроль виконується виключно на боці сервера.
       </p>
-      <section class="event-management-section" aria-labelledby="event-management">
+      <section
+        class="event-management-section"
+        aria-labelledby="event-management"
+      >
         <h2 id="event-management">Керування подіями</h2>
         <p>
           На цьому етапі кожне посилання «Редагувати» відкриває одну навчальну
           сторінку для редагування події.
         </p>
-        <table class="event-table" aria-label="Список подій">
-          <caption class="event-table__caption">
-            Список подій
-          </caption>
-          <thead class="event-table__head">
-            <tr class="event-table__row">
-              <th class="event-table__header" scope="col">Назва події</th>
-              <th class="event-table__header" scope="col">Дата</th>
-              <th class="event-table__header" scope="col">Місце проведення</th>
-              <th class="event-table__header event-table__header--numeric" scope="col">Ціна квитка</th>
-              <th class="event-table__header" scope="col">Дія</th>
-            </tr>
-          </thead>
-          <tbody class="event-table__body">
-            <tr class="event-table__row">
-              <th class="event-table__data" scope="row">Благoдійний концерт «Жадан і Собаки»</th>
-              <td class="event-table__data">2026-10-15</td>
-              <td class="event-table__data">Київ, Bel etage</td>
-              <td class="event-table__data event-table__data--numeric">500 грн</td>
-              <td class="event-table__data">
-                <a href="admin-edit.html" title="Редагувати подію"
-                  >Редагувати «Жадан і Собаки»</a
+        <div class="table-wrap">
+          <table class="event-table" aria-label="Список подій">
+            <caption class="event-table__caption">
+              Список подій
+            </caption>
+            <thead class="event-table__head">
+              <tr class="event-table__row">
+                <th class="event-table__header" scope="col">Назва події</th>
+                <th class="event-table__header" scope="col">Дата</th>
+                <th class="event-table__header" scope="col">
+                  Місце проведення
+                </th>
+                <th
+                  class="event-table__header event-table__header--numeric"
+                  scope="col"
                 >
-              </td>
-            </tr>
-            <tr class="event-table__row">
-              <th class="event-table__data" scope="row">Лекція: «Архітектура сучасних вебзастосунків»</th>
-              <td class="event-table__data">2026-10-20</td>
-              <td class="event-table__data">Суми, Конгрес-центр СумДУ</td>
-              <td class="event-table__data event-table__data--numeric">150 грн</td>
-              <td class="event-table__data">
-                <a href="admin-edit.html" title="Редагувати подію"
-                  >Редагувати «Архітектура сучасних вебзастосунків»</a
-                >
-              </td>
-            </tr>
-            <tr class="event-table__row">
-              <th class="event-table__data" scope="row">Виставка: «Сенси та Форми»</th>
-              <td class="event-table__data">2026-11-05</td>
-              <td class="event-table__data">Львів, Палац Мистецтв</td>
-              <td class="event-table__data event-table__data--numeric">200 грн</td>
-              <td class="event-table__data">
-                <a href="admin-edit.html" title="Редагувати подію"
-                  >Редагувати «Сенси та Форми»</a
-                >
-              </td>
-            </tr>
-            <tr class="event-table__row">
-              <th class="event-table__data" scope="row">Вистава «Конотопська відьма»</th>
-              <td class="event-table__data">2026-11-12</td>
-              <td class="event-table__data">Суми, Театр ім. Щепкіна</td>
-              <td class="event-table__data event-table__data--numeric">300 грн</td>
-              <td class="event-table__data">
-                <a href="admin-edit.html" title="Редагувати подію"
-                  >Редагувати «Конотопська відьма»</a
-                >
-              </td>
-            </tr>
-            <tr class="event-table__row">
-              <th class="event-table__data" scope="row">Великий Стендап Концерт</th>
-              <td class="event-table__data">2026-10-25</td>
-              <td class="event-table__data">Київ, Жовтневий палац</td>
-              <td class="event-table__data event-table__data--numeric">400 грн</td>
-              <td class="event-table__data">
-                <a href="admin-edit.html" title="Редагувати подію"
-                  >Редагувати Великий Стендап Концерт</a
-                >
-              </td>
-            </tr>
-            <tr class="event-table__row">
-              <th class="event-table__data" scope="row">Воркшоп: «Основи Git та GitHub»</th>
-              <td class="event-table__data">2026-10-30</td>
-              <td class="event-table__data">Онлайн (Zoom)</td>
-              <td class="event-table__data event-table__data--numeric">Безкоштовно</td>
-              <td class="event-table__data">
-                <a href="admin-edit.html" title="Редагувати подію"
-                  >Редагувати «Основи Git та GitHub»</a
-                >
-              </td>
-            </tr>
-          </tbody>
-        </table>
+                  Ціна квитка
+                </th>
+                <th class="event-table__header" scope="col">Дія</th>
+              </tr>
+            </thead>
+            <tbody class="event-table__body">
+              <tr class="event-table__row">
+                <th class="event-table__data" scope="row">
+                  Благoдійний концерт «Жадан і Собаки»
+                </th>
+                <td class="event-table__data">2026-10-15</td>
+                <td class="event-table__data">Київ, Bel etage</td>
+                <td class="event-table__data event-table__data--numeric">
+                  500 грн
+                </td>
+                <td class="event-table__data">
+                  <div class="event-table__actions">
+                    <a href="admin-edit.html" title="Редагувати подію"
+                      >Редагувати «Жадан і Собаки»</a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr class="event-table__row">
+                <th class="event-table__data" scope="row">
+                  Лекція: «Архітектура сучасних вебзастосунків»
+                </th>
+                <td class="event-table__data">2026-10-20</td>
+                <td class="event-table__data">Суми, Конгрес-центр СумДУ</td>
+                <td class="event-table__data event-table__data--numeric">
+                  150 грн
+                </td>
+                <td class="event-table__data">
+                  <div class="event-table__actions">
+                    <a href="admin-edit.html" title="Редагувати подію"
+                      >Редагувати «Архітектура сучасних вебзастосунків»</a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr class="event-table__row">
+                <th class="event-table__data" scope="row">
+                  Виставка: «Сенси та Форми»
+                </th>
+                <td class="event-table__data">2026-11-05</td>
+                <td class="event-table__data">Львів, Палац Мистецтв</td>
+                <td class="event-table__data event-table__data--numeric">
+                  200 грн
+                </td>
+                <td class="event-table__data">
+                  <div class="event-table__actions">
+                    <a href="admin-edit.html" title="Редагувати подію"
+                      >Редагувати «Сенси та Форми»</a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr class="event-table__row">
+                <th class="event-table__data" scope="row">
+                  Вистава «Конотопська відьма»
+                </th>
+                <td class="event-table__data">2026-11-12</td>
+                <td class="event-table__data">Суми, Театр ім. Щепкіна</td>
+                <td class="event-table__data event-table__data--numeric">
+                  300 грн
+                </td>
+                <td class="event-table__data">
+                  <div class="event-table__actions">
+                    <a href="admin-edit.html" title="Редагувати подію"
+                      >Редагувати «Конотопська відьма»</a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr class="event-table__row">
+                <th class="event-table__data" scope="row">
+                  Великий Стендап Концерт
+                </th>
+                <td class="event-table__data">2026-10-25</td>
+                <td class="event-table__data">Київ, Жовтневий палац</td>
+                <td class="event-table__data event-table__data--numeric">
+                  400 грн
+                </td>
+                <td class="event-table__data">
+                  <div class="event-table__actions">
+                    <a href="admin-edit.html" title="Редагувати подію"
+                      >Редагувати Великий Стендап Концерт</a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr class="event-table__row">
+                <th class="event-table__data" scope="row">
+                  Воркшоп: «Основи Git та GitHub»
+                </th>
+                <td class="event-table__data">2026-10-30</td>
+                <td class="event-table__data">Онлайн (Zoom)</td>
+                <td class="event-table__data event-table__data--numeric">
+                  Безкоштовно
+                </td>
+                <td class="event-table__data">
+                  <div class="event-table__actions">
+                    <a href="admin-edit.html" title="Редагувати подію"
+                      >Редагувати «Основи Git та GitHub»</a
+                    >
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
       <section class="event-add-section" aria-labelledby="add-event">
         <h2 id="add-event">Додати нову подію</h2>
@@ -154,7 +202,8 @@
             <legend class="form__legend">Основні дані події</legend>
 
             <label class="form__label" for="event-code">Артикул події:</label>
-            <input class="form__input"
+            <input
+              class="form__input"
               type="text"
               id="event-code"
               name="eventCode"
@@ -162,10 +211,13 @@
               pattern="^AF-\d{4}$"
               aria-describedby="code-hint"
             />
-            <p class="form__hint" id="code-hint">Формат: AF- та 4 цифри (наприклад, AF-1024)</p>
+            <p class="form__hint" id="code-hint">
+              Формат: AF- та 4 цифри (наприклад, AF-1024)
+            </p>
 
             <label class="form__label" for="event-title">Назва події:</label>
-            <input class="form__input"
+            <input
+              class="form__input"
               type="text"
               id="event-title"
               name="title"
@@ -174,24 +226,32 @@
               maxlength="100"
               aria-describedby="title-hint"
             />
-            <p class="form__hint" id="title-hint">Введіть назву події (від 5 до 100 символів).</p>
+            <p class="form__hint" id="title-hint">
+              Введіть назву події (від 5 до 100 символів).
+            </p>
 
             <label class="form__label" for="event-category">Категорія:</label>
-            <select class="form__select" id="event-category" name="category" required>
-              <option class="form__option" disabled selected value="">Оберіть категорію</option>
+            <select
+              class="form__select"
+              id="event-category"
+              name="category"
+              required
+            >
+              <option class="form__option" disabled selected value="">
+                Оберіть категорію
+              </option>
               <option class="form__option" value="concert">Концерт</option>
               <option class="form__option" value="lecture">Лекція</option>
-              <option class="form__option" value="performance">
-                Вистава
-              </option>
-              <option class="form__option" value="exhibition">
-                Виставка
-              </option>
+              <option class="form__option" value="performance">Вистава</option>
+              <option class="form__option" value="exhibition">Виставка</option>
               <option class="form__option" value="other">Інше</option>
             </select>
 
-            <label class="form__label" for="event-poster">Постер (зображення):</label>
-            <input class="form__input"
+            <label class="form__label" for="event-poster"
+              >Постер (зображення):</label
+            >
+            <input
+              class="form__input"
               type="file"
               id="event-poster"
               name="poster"
@@ -206,8 +266,11 @@
           <fieldset class="form__fieldset">
             <legend class="form__legend">Опис і наявність</legend>
 
-            <label class="form__label" for="event-description">Опис події:</label>
-            <textarea class="form__textarea"
+            <label class="form__label" for="event-description"
+              >Опис події:</label
+            >
+            <textarea
+              class="form__textarea"
               rows="4"
               cols="40"
               id="event-description"
@@ -222,7 +285,8 @@
             </p>
 
             <label class="form__label" for="event-price">Ціна (грн):</label>
-            <input class="form__input"
+            <input
+              class="form__input"
               type="number"
               id="event-price"
               name="ticketPrice"
@@ -237,7 +301,8 @@
             </p>
 
             <label class="form__label" for="event-date">Дата проведення:</label>
-            <input class="form__input"
+            <input
+              class="form__input"
               type="datetime-local"
               id="event-date"
               name="eventDate"
@@ -251,8 +316,11 @@
               2027-12-31).
             </p>
 
-            <label class="form__label" for="event-location">Місце проведення:</label>
-            <input class="form__input"
+            <label class="form__label" for="event-location"
+              >Місце проведення:</label
+            >
+            <input
+              class="form__input"
               type="text"
               id="event-location"
               name="location"
@@ -267,63 +335,84 @@
             </p>
 
             <label class="form__label" for="inStock">
-              <input class="form__checkbox" id="inStock" type="checkbox" name="inStock" value="yes" checked />
-              Квитки у продажу </label>
+              <input
+                class="form__checkbox"
+                id="inStock"
+                type="checkbox"
+                name="inStock"
+                value="yes"
+                checked
+              />
+              Квитки у продажу
+            </label>
             <label class="form__label" for="agreement">
-              <input class="form__checkbox" id="agreement" type="checkbox" name="agreement" value="yes" required />
+              <input
+                class="form__checkbox"
+                id="agreement"
+                type="checkbox"
+                name="agreement"
+                value="yes"
+                required
+              />
               Погоджуюсь з умовами публікації події та підтверджую, що надана
               інформація є достовірною
             </label>
           </fieldset>
 
-          <button class="button button--primary" type="submit">Додати</button>
-          <button class="button button--secondary" type="reset">Очистити</button>
+          <div class="form__actions">
+            <button class="button button--primary" type="submit">Додати</button>
+            <button class="button button--secondary" type="reset">
+              Очистити
+            </button>
+          </div>
         </form>
       </section>
     </main>
     <footer class="site-footer">
-      <section id="contacts">
-        <h2>Контакти</h2>
-        <address>
-          <ul class="contact-list">
-            <li class="contact-list__item">
-              Електронна пошта:
-              <a href="mailto:info@afishka.ua" title="Електронна пошта"
-                >info@afishka.ua</a
-              >
-            </li>
+      <div class="site-footer__content">
+        <section id="contacts">
+          <h2>Контакти</h2>
+          <address>
+            <ul class="contact-list">
+              <li class="contact-list__item">
+                Електронна пошта:
+                <a href="mailto:info@afishka.ua" title="Електронна пошта"
+                  >info@afishka.ua</a
+                >
+              </li>
 
-            <li class="contact-list__item">
-              Контактний телефон:
-              <a href="tel:+380123456789" title="Контактний телефон"
-                >+38 (012) 345-67-89</a
-              >
-            </li>
+              <li class="contact-list__item">
+                Контактний телефон:
+                <a href="tel:+380123456789" title="Контактний телефон"
+                  >+38 (012) 345-67-89</a
+                >
+              </li>
 
-            <li class="contact-list__item">
-              Адреса:
-              <a
-                href="https://maps.google.com/?q=Kyiv"
-                title="Переглянути на карті"
-                target="_blank"
-                >м. Київ, вул. Хрещатик, 1</a
-              >
-            </li>
-          </ul>
-        </address>
-      </section>
-      <section class="admin-section">
-        <h2>Адміністрування</h2>
-        <p>
-          <a
-            href="admin.html"
-            aria-current="page"
-            title="Перейти до адміністративної панелі"
-            >Редагування або додавання подій</a
-          >
-        </p>
-      </section>
-      <small
+              <li class="contact-list__item">
+                Адреса:
+                <a
+                  href="https://maps.google.com/?q=Kyiv"
+                  title="Переглянути на карті"
+                  target="_blank"
+                  >м. Київ, вул. Хрещатик, 1</a
+                >
+              </li>
+            </ul>
+          </address>
+        </section>
+        <section class="admin-section">
+          <h2>Адміністрування</h2>
+          <p>
+            <a
+              href="admin.html"
+              aria-current="page"
+              title="Перейти до адміністративної панелі"
+              >Редагування або додавання подій</a
+            >
+          </p>
+        </section>
+      </div>
+      <small class="site-footer__copy"
         >&copy; 2026 Afishka. Розроблено: студент групи ІН-41/1 - Орехов
         Іван.</small
       >

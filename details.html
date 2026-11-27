@@ -17,7 +17,7 @@
 
   <body>
     <header class="site-header">
-      <a href="index.html">
+      <a class="site-header__logo" href="index.html">
         <img
           fetchpriority="high"
           src="images/afishkalogo-L.png"
@@ -102,114 +102,119 @@
           </ul>
         </nav>
       </div>
-      <section class="event-description" id="event-description">
-        <figure class="event-description__figure">
-          <picture class="event-description__picture">
-            <source
-              media="(max-width: 600px)"
-              srcset="images/event1-S.webp"
-              type="image/webp"
-            />
-            <source
-              media="(max-width: 900px)"
-              srcset="images/event1-M.webp"
-              type="image/webp"
-            />
-            <source srcset="images/event1-L.webp" type="image/webp" />
+      <div class="event-overview">
+        <section class="event-description" id="event-description">
+          <figure class="event-description__figure">
+            <picture class="event-description__picture">
+              <source
+                media="(max-width: 600px)"
+                srcset="images/event1-S.webp"
+                type="image/webp"
+              />
+              <source
+                media="(max-width: 900px)"
+                srcset="images/event1-M.webp"
+                type="image/webp"
+              />
+              <source srcset="images/event1-L.webp" type="image/webp" />
 
-            <source
-              media="(max-width: 600px)"
-              srcset="images/event1-S.png"
-              type="image/png"
-            />
-            <source
-              media="(max-width: 900px)"
-              srcset="images/event1-M.png"
-              type="image/png"
-            />
-            <img
-              fetchpriority="high"
-              src="images/event1-L.png"
-              alt="Юрба людей на концерті"
-              title="Демонстраційне фото з концерту"
-              width="1200"
-              height="800"
-            />
-          </picture>
-          <figcaption class="event-description__caption">
-            Фото з концерту «Жадан і Собаки»
-          </figcaption>
-        </figure>
-        <h2 class="event-description__title">Опис події</h2>
-        <p class="event-description__text">
-          Запрошуємо на великий благодійний концерт гурту
-          <strong>«Жадан і Собаки»</strong> у київському клубі
-          <em>Bel etage</em>! Це буде незабутній вечір вибухового українського
-          ска-панку, гострої соціальної лірики та неймовірної енергетики, яка
-          об’єднує сотні сердець в унісон. Під час виступу музиканти презентують
-          композиції з нового альбому, над яким працювали останні місяці, а
-          також виконають давно улюблені хіти — <cite>«Мальви»</cite>,
-          <cite>«Натаха»</cite>, <cite>«Автозак»</cite>,
-          <cite>«Мадонна»</cite> та <cite>«Ріка»</cite>. На глядачів чекає
-          двогодинна програма <em>наживо</em>, потужне духове звучання, щире
-          спілкування із залом та фірмовий харківський драйв, який, як
-          зазначають організатори, <q>не залишить байдужим жодного слухача</q>.
-        </p>
-        <p class="event-description__text">
-          Головна мета заходу — <strong>благодійна</strong>.
-          <mark>Сто відсотків прибутку з продажу квитків</mark>, а також кошти,
-          зібрані під час традиційного благодійного аукціону в перерві між
-          блоками програми, будуть передані на закупівлю
-          <abbr title="Безпілотні літальні апарати">БПЛА</abbr> (дронів),
-          засобів зв’язку та автомобілів для підрозділів
-          <abbr title="Збройні сили України">ЗСУ</abbr>. На аукціоні будуть
-          представлені унікальні лоти: книги Сергія Жадана з автографами,
-          вінілові платівки гурту та пам’ятні сувеніри від українських
-          військових.
-        </p>
-        <p class="event-description__text">
-          Відкриття дверей клубу о <time datetime="18:00">18:00</time>, початок
-          концертної програми о <time datetime="19:00">19:00</time>. На локації
-          працює гардероб, барна зона та
-          <mark>облаштоване укриття на випадок повітряної тривоги</mark>.
-          Приходьте, щоб відчути силу живої української музики, зарядитися
-          оптимізмом і зробити свій внесок у спільну справу!
-        </p>
-      </section>
-      <section class="event-details" id="event-details">
-        <h2 class="event-details__title">Детальна інформація про подію</h2>
+              <source
+                media="(max-width: 600px)"
+                srcset="images/event1-S.png"
+                type="image/png"
+              />
+              <source
+                media="(max-width: 900px)"
+                srcset="images/event1-M.png"
+                type="image/png"
+              />
+              <img
+                fetchpriority="high"
+                src="images/event1-L.png"
+                alt="Юрба людей на концерті"
+                title="Демонстраційне фото з концерту"
+                width="1200"
+                height="800"
+              />
+            </picture>
+            <figcaption class="event-description__caption">
+              Фото з концерту «Жадан і Собаки»
+            </figcaption>
+          </figure>
+          <h2 class="event-description__title">Опис події</h2>
+          <p class="event-description__text">
+            Запрошуємо на великий благодійний концерт гурту
+            <strong>«Жадан і Собаки»</strong> у київському клубі
+            <em>Bel etage</em>! Це буде незабутній вечір вибухового українського
+            ска-панку, гострої соціальної лірики та неймовірної енергетики, яка
+            об’єднує сотні сердець в унісон. Під час виступу музиканти
+            презентують композиції з нового альбому, над яким працювали останні
+            місяці, а також виконають давно улюблені хіти —
+            <cite>«Мальви»</cite>, <cite>«Натаха»</cite>,
+            <cite>«Автозак»</cite>, <cite>«Мадонна»</cite> та
+            <cite>«Ріка»</cite>. На глядачів чекає двогодинна програма
+            <em>наживо</em>, потужне духове звучання, щире спілкування із залом
+            та фірмовий харківський драйв, який, як зазначають організатори,
+            <q>не залишить байдужим жодного слухача</q>.
+          </p>
+          <p class="event-description__text">
+            Головна мета заходу — <strong>благодійна</strong>.
+            <mark>Сто відсотків прибутку з продажу квитків</mark>, а також
+            кошти, зібрані під час традиційного благодійного аукціону в перерві
+            між блоками програми, будуть передані на закупівлю
+            <abbr title="Безпілотні літальні апарати">БПЛА</abbr> (дронів),
+            засобів зв’язку та автомобілів для підрозділів
+            <abbr title="Збройні сили України">ЗСУ</abbr>. На аукціоні будуть
+            представлені унікальні лоти: книги Сергія Жадана з автографами,
+            вінілові платівки гурту та пам’ятні сувеніри від українських
+            військових.
+          </p>
+          <p class="event-description__text">
+            Відкриття дверей клубу о <time datetime="18:00">18:00</time>,
+            початок концертної програми о <time datetime="19:00">19:00</time>.
+            На локації працює гардероб, барна зона та
+            <mark>облаштоване укриття на випадок повітряної тривоги</mark>.
+            Приходьте, щоб відчути силу живої української музики, зарядитися
+            оптимізмом і зробити свій внесок у спільну справу!
+          </p>
+        </section>
+        <section class="event-details" id="event-details">
+          <h2 class="event-details__title">Детальна інформація про подію</h2>
 
-        <dl class="event-specs">
-          <div class="event-specs__item">
-            <dt class="event-specs__label">Категорія:</dt>
-            <dd class="event-specs__value">Концерт</dd>
-          </div>
+          <dl class="event-specs">
+            <div class="event-specs__item">
+              <dt class="event-specs__label">Категорія:</dt>
+              <dd class="event-specs__value">Концерт</dd>
+            </div>
 
-          <div class="event-specs__item">
-            <dt class="event-specs__label">Ціна квитка:</dt>
-            <dd class="event-specs__value"><data value="500">500 грн</data></dd>
-          </div>
+            <div class="event-specs__item">
+              <dt class="event-specs__label">Ціна квитка:</dt>
+              <dd class="event-specs__value">
+                <data value="500">500 грн</data>
+              </dd>
+            </div>
 
-          <div class="event-specs__item">
-            <dt class="event-specs__label">Дата проведення:</dt>
-            <dd class="event-specs__value">
-              <time datetime="2026-10-15">15 жовтня 2026 року</time>
-            </dd>
-          </div>
+            <div class="event-specs__item">
+              <dt class="event-specs__label">Дата проведення:</dt>
+              <dd class="event-specs__value">
+                <time datetime="2026-10-15">15 жовтня 2026 року</time>
+              </dd>
+            </div>
 
-          <div class="event-specs__item">
-            <dt class="event-specs__label">Місце проведення:</dt>
-            <dd class="event-specs__value">м. Київ, клуб Bel etage</dd>
-          </div>
+            <div class="event-specs__item">
+              <dt class="event-specs__label">Місце проведення:</dt>
+              <dd class="event-specs__value">м. Київ, клуб Bel etage</dd>
+            </div>
 
-          <div class="event-specs__item">
-            <dt class="event-specs__label">Статус події:</dt>
-            <dd class="event-specs__value">
-              <data value="active">Активна (квитки у продажу)</data>
-            </dd>
-          </div>
-        </dl>
-      </section>
+            <div class="event-specs__item">
+              <dt class="event-specs__label">Статус події:</dt>
+              <dd class="event-specs__value">
+                <data value="active">Активна (квитки у продажу)</data>
+              </dd>
+            </div>
+          </dl>
+        </section>
+      </div>
       <section class="event-program" id="event-table">
         <h2 class="event-program__title">Програма вечора</h2>
         <table class="event-table" aria-label="Розклад події">
@@ -360,52 +365,54 @@
 
           <fieldset class="form__fieldset">
             <legend class="form__legend">Оцінка події:</legend>
-            <label class="form__label"
-              ><input
-                class="form__radio"
-                type="radio"
-                name="rating"
-                value="1"
-                required
-              />
-              1</label
-            >
-            <label class="form__label"
-              ><input
-                class="form__radio"
-                type="radio"
-                name="rating"
-                value="2"
-              />
-              2</label
-            >
-            <label class="form__label"
-              ><input
-                class="form__radio"
-                type="radio"
-                name="rating"
-                value="3"
-              />
-              3</label
-            >
-            <label class="form__label"
-              ><input
-                class="form__radio"
-                type="radio"
-                name="rating"
-                value="4"
-              />
-              4</label
-            >
-            <label class="form__label"
-              ><input
-                class="form__radio"
-                type="radio"
-                name="rating"
-                value="5"
-              />
-              5</label
-            >
+            <div class="form__radio-group">
+              <label class="form__label"
+                ><input
+                  class="form__radio"
+                  type="radio"
+                  name="rating"
+                  value="1"
+                  required
+                />
+                1</label
+              >
+              <label class="form__label"
+                ><input
+                  class="form__radio"
+                  type="radio"
+                  name="rating"
+                  value="2"
+                />
+                2</label
+              >
+              <label class="form__label"
+                ><input
+                  class="form__radio"
+                  type="radio"
+                  name="rating"
+                  value="3"
+                />
+                3</label
+              >
+              <label class="form__label"
+                ><input
+                  class="form__radio"
+                  type="radio"
+                  name="rating"
+                  value="4"
+                />
+                4</label
+              >
+              <label class="form__label"
+                ><input
+                  class="form__radio"
+                  type="radio"
+                  name="rating"
+                  value="5"
+                />
+                5</label
+              >
+            </div>
           </fieldset>
 
           <label class="form__label" for="review-text"
@@ -438,59 +445,62 @@
             />
             Погоджуюсь з правилами публікації відгуків
           </label>
-
-          <button class="button button--primary" type="submit">
-            Надіслати
-          </button>
-          <a
-            class="back-link"
-            href="index.html#events-container"
-            title="Повернутися до подій"
-            >Назад до подій</a
-          >
+          <div class="form__actions">
+            <button class="button button--primary" type="submit">
+              Надіслати
+            </button>
+            <a
+              class="back-link"
+              href="index.html#events-container"
+              title="Повернутися до подій"
+              >Назад до подій</a
+            >
+          </div>
         </form>
       </section>
     </main>
     <footer class="site-footer">
-      <section id="contacts">
-        <h2>Контакти</h2>
-        <address>
-          <ul class="contact-list">
-            <li class="contact-list__item">
-              Електронна пошта:
-              <a href="mailto:info@afishka.ua" title="Електронна пошта"
-                >info@afishka.ua</a
-              >
-            </li>
+      <div class="site-footer__content">
+        <section id="contacts">
+          <h2>Контакти</h2>
+          <address>
+            <ul class="contact-list">
+              <li class="contact-list__item">
+                Електронна пошта:
+                <a href="mailto:info@afishka.ua" title="Електронна пошта"
+                  >info@afishka.ua</a
+                >
+              </li>
 
-            <li class="contact-list__item">
-              Контактний телефон:
-              <a href="tel:+380123456789" title="Контактний телефон"
-                >+38 (012) 345-67-89</a
-              >
-            </li>
+              <li class="contact-list__item">
+                Контактний телефон:
+                <a href="tel:+380123456789" title="Контактний телефон"
+                  >+38 (012) 345-67-89</a
+                >
+              </li>
 
-            <li class="contact-list__item">
-              Адреса:
-              <a
-                href="https://maps.google.com/?q=Kyiv"
-                title="Переглянути на карті"
-                target="_blank"
-                >м. Київ, вул. Хрещатик, 1</a
-              >
-            </li>
-          </ul>
-        </address>
-      </section>
-      <section class="admin-section">
-        <h2>Адміністрування</h2>
-        <p>
-          <a href="admin.html" title="Перейти до адміністративної панелі"
-            >Редагування або додавання подій</a
-          >
-        </p>
-      </section>
-      <small
+              <li class="contact-list__item">
+                Адреса:
+                <a
+                  href="https://maps.google.com/?q=Kyiv"
+                  title="Переглянути на карті"
+                  target="_blank"
+                  >м. Київ, вул. Хрещатик, 1</a
+                >
+              </li>
+            </ul>
+          </address>
+        </section>
+        <section class="admin-section">
+          <h2>Адміністрування</h2>
+          <p>
+            <a href="admin.html" title="Перейти до адміністративної панелі"
+              >Редагування або додавання подій</a
+            >
+          </p>
+        </section>
+      </div>
+      <small class="site-footer__copy"
         >&copy; 2026 Afishka. Розроблено: студент групи ІН-41/1 - Орехов
         Іван.</small
       >
