@@ -640,24 +640,25 @@
     content: '× ';
   }
 
-  /* Приглушення картки sold-out за правилом UI-кіта: тло + фото, текст залишається контрастним */
-  .event-card:has([data-status='sold-out']) {
-    background-color: var(--color-surface-soldout);
-    border-style: dashed;
-    border-color: var(--color-border);
-    box-shadow: none;
+  /* 6. Сторінка деталей: опис із фото + блок характеристик поруч */
+  .event-overview {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: var(--space-l);
+    margin-block-end: var(--space-l);
   }
 
-  .event-card:has([data-status='sold-out']) .event-card__image {
-    filter: grayscale(100%) opacity(0.65);
+  .event-description {
+    flex: 2 1 22rem;
+    min-inline-size: 0;
   }
 
-  .event-card:has([data-status='sold-out']) .event-card__date {
-    background-color: var(--color-soldout-bg);
-    color: var(--color-soldout-text);
+  .event-details {
+    flex: 1 1 18rem;
+    min-inline-size: 0;
   }
 
-  /* Обмеження довжини рядка та інфоблоки */
   .about-section__text,
   .about-section__list,
   .video-section__text,
@@ -669,8 +670,7 @@
 
   .event-description__figure {
     margin-inline: 0;
-    margin-block: var(--space-m);
-    max-inline-size: 48rem;
+    margin-block: 0 var(--space-m);
   }
 
   .event-description__figure img {
@@ -700,10 +700,14 @@
     border: 1px solid var(--color-border-subtle);
     border-radius: var(--radius-card);
     padding: var(--space-l);
-    max-inline-size: 36rem;
+    margin: 0;
   }
 
   .event-specs__item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-xs) var(--space-m);
     padding-block: var(--space-s);
     border-block-end: 1px solid var(--color-border-subtle);
   }
@@ -713,19 +717,27 @@
   }
 
   .event-specs__label {
+    flex: 0 0 9rem;
     font-size: 0.85rem;
     color: var(--color-muted);
   }
 
   .event-specs__value {
-    margin-inline-start: 0;
-    margin-block-start: var(--space-xs);
+    flex: 1 1 10rem;
+    min-inline-size: 0;
+    margin: 0;
     font-size: 1.05rem;
     font-weight: 700;
     color: var(--color-text);
+    overflow-wrap: anywhere;
   }
 
-  /* Таблиці даних (темна шапка #281345 + зебра) */
+  /* 7. Таблиці даних (Flexbox на самій таблиці) */
+  .table-wrap {
+    overflow-x: auto;
+    max-inline-size: 100%;
+  }
+
   .event-table {
     inline-size: 100%;
     border-collapse: collapse;
@@ -765,6 +777,13 @@
   .event-table__data--numeric {
     text-align: end;
     font-variant-numeric: tabular-nums;
+  }
+
+  .event-table__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-s);
   }
 
   /* Блок частих запитань <details> / <summary> */
