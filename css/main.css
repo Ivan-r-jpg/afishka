@@ -819,7 +819,7 @@
     color: var(--color-muted);
   }
 
-  /* Форми */
+  /* 8. Форми */
   .form {
     max-inline-size: 40rem;
   }
@@ -871,7 +871,6 @@
     color: var(--color-muted);
   }
 
-  /* Стан некоректного значення: червона рамка + потовщення + значок у підказці */
   .form__input:user-invalid,
   .form__select:user-invalid,
   .form__textarea:user-invalid {
@@ -896,29 +895,51 @@
 
   .form__checkbox,
   .form__radio {
+    flex: none;
     accent-color: var(--color-primary);
-    margin-inline-end: var(--space-xs);
     inline-size: 1.15em;
     block-size: 1.15em;
-    vertical-align: middle;
+    margin: 0;
+  }
+
+  .form__radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-m);
   }
 
   .form__label:has(.form__radio) {
-    display: inline-block;
-    margin-inline-end: var(--space-m);
-    margin-block-start: var(--space-xs);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    margin: 0;
     font-weight: 500;
     cursor: pointer;
   }
 
   .form__label:has(.form__checkbox) {
+    display: flex;
+    align-items: center;
+    gap: var(--space-s);
     font-weight: 500;
     cursor: pointer;
   }
 
+  /* Група кнопок форми */
+  .form__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-s);
+    margin-block-start: var(--space-m);
+  }
+
   /* Кнопки (мінімальна висота 48px за UI-кітом) */
   .button {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     min-block-size: 48px;
     padding-block: 0.65rem;
     padding-inline: 1.5rem;
@@ -926,8 +947,6 @@
     border: 2px solid transparent;
     font-weight: 700;
     cursor: pointer;
-    margin-inline-end: var(--space-s);
-    margin-block-start: var(--space-s);
   }
 
   .button--primary {
@@ -951,7 +970,6 @@
 
   .back-link {
     display: inline-block;
-    margin-block-start: var(--space-m);
     font-weight: 600;
   }
 }
