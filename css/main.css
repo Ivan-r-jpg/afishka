@@ -481,14 +481,24 @@
     outline: 3px solid var(--color-focus);
     outline-offset: 2px;
   }
+  /* 5. Перелік карток та картка каталогу (Flexbox) */
+  .events-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-l);
+    margin-block-start: var(--space-m);
+  }
+
   .event-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 19rem;
+    min-inline-size: 0;
     background-color: var(--color-surface);
     border: 1px solid var(--color-border-subtle);
     border-radius: var(--radius-card);
     box-shadow: var(--shadow-card);
     padding: var(--space-l);
-    margin-block-end: var(--space-l);
-    max-inline-size: 38rem;
     transition:
       transform 0.2s ease,
       box-shadow 0.2s ease;
@@ -509,16 +519,24 @@
     cursor: not-allowed;
   }
 
-  /* Вимикаємо наведення та клік на посиланні всередині недоступної картки */
   .event-card:has([data-status='sold-out']) .event-card__title a {
     pointer-events: none;
     color: var(--color-muted);
   }
 
+  .event-card:has([data-status='sold-out']) .event-card__image {
+    filter: grayscale(100%) opacity(0.65);
+  }
+
+  .event-card:has([data-status='sold-out']) .event-card__date {
+    background-color: var(--color-soldout-bg);
+    color: var(--color-soldout-text);
+  }
+
   .event-card__image {
     display: block;
     inline-size: 100%;
-    max-block-size: 16rem;
+    max-block-size: 14rem;
     object-fit: cover;
     border-radius: var(--radius-sm);
     margin-block-end: var(--space-m);
@@ -527,7 +545,8 @@
   .event-card__title {
     margin-block-start: 0;
     margin-block-end: var(--space-s);
-    font-size: 1.3rem;
+    font-size: 1.25rem;
+    overflow-wrap: anywhere;
   }
 
   .event-card__title a {
@@ -541,25 +560,11 @@
   }
 
   .event-card__category {
-    display: inline-block;
+    align-self: flex-start;
     background-color: var(--color-surface-alt);
     color: var(--color-primary);
     font-size: 0.85rem;
     font-weight: 600;
-    padding-block: var(--space-xs);
-    padding-inline: 0.75rem;
-    border-radius: var(--radius-sm);
-    margin-block-end: var(--space-s);
-    margin-inline-end: var(--space-s);
-  }
-
-  /* Виділена дата лаймовим акцентом #D8F566 */
-  .event-card__date {
-    display: inline-block;
-    background-color: var(--color-accent);
-    color: var(--color-on-accent);
-    font-size: 0.9rem;
-    font-weight: 700;
     padding-block: var(--space-xs);
     padding-inline: 0.75rem;
     border-radius: var(--radius-sm);
@@ -569,29 +574,52 @@
   .event-card__description {
     max-inline-size: 65ch;
     color: var(--color-muted);
+    overflow-wrap: anywhere;
   }
 
   .event-card__venue {
     color: var(--color-text);
     font-weight: 500;
-    margin-block-end: var(--space-xs);
+    margin-block-end: var(--space-m);
+  }
+
+  /* Нижня частина картки (варіант 10: ціна, дата, статус), притиснута донизу */
+  .event-card__footer {
+    margin-block-start: auto;
+    padding-block-start: var(--space-m);
+    border-block-start: 1px solid var(--color-border-subtle);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-s);
   }
 
   .event-card__price {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     font-weight: 800;
     color: var(--color-text);
-    margin-block-end: var(--space-s);
+    margin: 0;
+    margin-inline-end: auto;
   }
 
-  .event-card__status {
-    display: inline-block;
+  .event-card__date {
+    background-color: var(--color-accent);
+    color: var(--color-on-accent);
     font-size: 0.85rem;
     font-weight: 700;
     padding-block: var(--space-xs);
     padding-inline: 0.75rem;
     border-radius: var(--radius-sm);
-    margin-block-end: 0;
+    margin: 0;
+  }
+
+  .event-card__status {
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding-block: var(--space-xs);
+    padding-inline: 0.75rem;
+    border-radius: var(--radius-sm);
+    margin: 0;
   }
 
   .event-card__status[data-status='available'] {
