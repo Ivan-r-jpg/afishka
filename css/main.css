@@ -234,7 +234,7 @@
     color: var(--color-primary);
   }
 
-  /* Активна сторінка: фіолетовий текст і підкреслення (як у макеті) */
+  /* Активна сторінка: фіолетовий текст і підкреслення */
   .header-nav a[aria-current='page'] {
     color: var(--color-primary);
     font-weight: 700;
@@ -243,7 +243,7 @@
     text-underline-offset: 0.35em;
   }
 
-  /* Темний підвал сайту (#281345) */
+  /* 2. Темний підвал сайту */
   .site-footer {
     background-color: var(--color-dark);
     color: var(--color-on-dark-muted);
@@ -252,15 +252,24 @@
     padding-inline: var(--space-m);
   }
 
-  .site-footer > * {
+  .site-footer__content,
+  .site-footer__copy {
     max-inline-size: 72rem;
     margin-inline: auto;
+  }
+
+  .site-footer__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--space-l);
   }
 
   .site-footer h2 {
     font-size: 1.1rem;
     color: var(--color-on-dark);
-    margin-block-start: var(--space-m);
+    margin-block-start: 0;
     margin-block-end: var(--space-s);
   }
 
@@ -284,14 +293,14 @@
   .contact-list {
     list-style: none;
     padding: 0;
-    margin-block: var(--space-s);
+    margin: 0;
   }
 
   .contact-list__item {
     margin-block-end: var(--space-xs);
   }
 
-  .site-footer small {
+  .site-footer__copy {
     display: block;
     margin-block-start: var(--space-l);
     padding-block-start: var(--space-m);
@@ -299,26 +308,31 @@
     color: var(--color-on-dark-muted);
   }
 
-  /* Хлібні крихти та навігація по деталях */
+  /* 3. Хлібні крихти та внутрішня навігація сторінки деталей */
   .breadcrumbs {
     margin-block-end: var(--space-m);
   }
 
   .breadcrumbs__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-xs) var(--space-s);
     list-style: none;
     padding: 0;
     margin: 0;
   }
 
   .breadcrumbs__item {
-    display: inline;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-s);
     font-size: 0.9rem;
     color: var(--color-muted);
   }
 
   .breadcrumbs__item + .breadcrumbs__item::before {
     content: '/';
-    margin-inline: var(--space-s);
     color: var(--color-border);
   }
 
@@ -328,15 +342,12 @@
   }
 
   .event-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-s);
     list-style: none;
     padding: 0;
     margin-block: var(--space-s) var(--space-l);
-  }
-
-  .event-nav__item {
-    display: inline-block;
-    margin-inline-end: var(--space-s);
-    margin-block-end: var(--space-xs);
   }
 
   .event-nav__item a {
