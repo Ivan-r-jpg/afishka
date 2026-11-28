@@ -182,48 +182,43 @@
   }
 }
 
-/* Шар components — компоненти інтерфейсу (BEM) */
+/* Шар components — компоненти інтерфейсу (BEM) + компонування Flexbox */
 @layer components {
-  /* Шапка та головна навігація */
+  /* 1. Шапка та головна навігація */
   .site-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-m) var(--space-xl);
     background-color: var(--color-surface);
     border-block-end: 1px solid var(--color-border-subtle);
     padding-block: var(--space-m);
     padding-inline: var(--space-l);
   }
 
-  .site-header > a {
-    display: inline-block;
+  .site-header__logo {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
     font-size: 1.35rem;
     font-weight: 800;
     text-decoration: none;
     color: var(--color-text);
-    margin-inline-end: var(--space-xl);
-    margin-block-end: var(--space-s);
   }
 
-  .site-header > a img {
+  .site-header__logo img {
     max-inline-size: 2.25rem;
-    vertical-align: middle;
-    margin-inline-end: var(--space-xs);
     border-radius: var(--radius-sm);
   }
 
-  .header-nav {
-    display: inline-block;
-  }
-
-  .nav-list,
-  .header-nav ul {
+  .nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-m);
     list-style: none;
     margin: 0;
     padding: 0;
-  }
-
-  .nav-list__item,
-  .nav-item {
-    display: inline-block;
-    margin-inline-end: var(--space-m);
   }
 
   .header-nav a {
